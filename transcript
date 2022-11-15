@@ -1,0 +1,28 @@
+# Compile of control-unit.v failed with 1 errors.
+# Compile of control-unit.v failed with 1 errors.
+# Compile of control-unit.v failed with 1 errors.
+# Compile of control-unit.v failed with 1 errors.
+# Compile of control-unit.v was successful.
+# Compile of control-unit.v failed with 1 errors.
+# Compile of control-unit.v failed with 2 errors.
+# Compile of control-unit.v failed with 6 errors.
+# Compile of control-unit.v was successful.
+vsim -gui work.control_unit
+# vsim -gui work.control_unit 
+# Start time: 18:59:27 on Nov 15,2022
+# Loading work.control_unit
+add wave -position end  sim:/control_unit/alu_controls
+add wave -position end  sim:/control_unit/cs
+add wave -position end  sim:/control_unit/op_code
+force -freeze sim:/control_unit/op_code 1 0
+run
+add wave -position end  sim:/control_unit/cs_alu_op
+add wave -position end  sim:/control_unit/cs_call
+add wave -position end  sim:/control_unit/cs_reg_write
+run
+force -freeze sim:/control_unit/op_code 00010 0
+run
+add wave -position end  sim:/control_unit/cs_mem_op
+run
+force -freeze sim:/control_unit/op_code 00101 0
+run
