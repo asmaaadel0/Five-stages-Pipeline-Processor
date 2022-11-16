@@ -1,6 +1,6 @@
-module read_file #(parameter Num_of_bits=16, Num_of_registers= 2**20)(inst_mem);
+module read_file #(parameter Num_of_bits=16, Num_of_registers= 20)(inst_mem);
 
-    output reg [Num_of_bits-1:0] inst_mem [Num_of_registers-1:0];
+    output reg [Num_of_bits-1:0] inst_mem [2**Num_of_registers-1:0];
     integer outfile;
 	integer i=0;
 
