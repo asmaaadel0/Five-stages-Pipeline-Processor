@@ -79,30 +79,30 @@ Z9 !s108 1668610856.000000
 R6
 R7
 vinstruction_memory
-Z10 !s110 1668611007
+!s110 1668612466
 !i10b 1
-!s100 X8?8L1e[1D3AE10dced`b3
+!s100 8V3E1@m;<dm7T[[?SK_Y43
 R1
-IJQ3TLTg2<AjZDf]Q70L6d1
+I63Woei55RDAB6E6=iYMa<0
 R2
 R3
-w1668610979
+w1668611348
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v
-!i122 52
+!i122 54
 L0 1 19
 R4
 r1
 !s85 0
 31
-Z11 !s108 1668611007.000000
+!s108 1668612466.000000
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v|
 !i113 1
 R6
 R7
 vread_file
-R10
+!s110 1668611007
 !i10b 1
 !s100 h4j7<]eDSL8[SBS878mEN1
 R1
@@ -110,17 +110,17 @@ IjDeWhkD4bBW839A][QXjm0
 R2
 R3
 w1668610973
-Z12 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v
-Z13 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v
+Z10 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v
+Z11 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v
 !i122 53
 L0 1 22
 R4
 r1
 !s85 0
 31
-R11
-Z14 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v|
-Z15 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v|
+!s108 1668611007.000000
+Z12 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v|
+Z13 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v|
 !i113 1
 R6
 R7
@@ -156,8 +156,8 @@ I@_@K>SOn;G?89zSS7o=EY2
 R2
 R3
 w1668589752
-R12
-R13
+R10
+R11
 !i122 23
 L0 13 27
 R4
@@ -165,8 +165,8 @@ r1
 !s85 0
 31
 !s108 1668589757.000000
-R14
-R15
+R12
+R13
 !i113 1
 R6
 R7
