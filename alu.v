@@ -4,13 +4,14 @@ module alu(
     input [15:0] op2,
     input [3:0]shamt,
     input [12:0] alu_operation,
-    //input clk,
+    input clk,
     output reg [2:0] flag=0,
     output reg [15:0] result
     
     );
 
-always @* 
+//always @(posedge clk) 
+always @(*)
 begin
 //------------------------------------- OUT ---------------------------------------//
 if(alu_operation[12])
@@ -29,7 +30,7 @@ end
 //------------------------------------- NOT ---------------------------------------//
 if(alu_operation[9])
 begin
-result= ~op1;
+result= ~op2;
 
 end
 //------------------------------------- MOV ---------------------------------------//
@@ -45,7 +46,8 @@ end
 //------------------------------------- SUB ---------------------------------------//
 if(alu_operation[6])
 begin
-result= op1 - op2;
+//result= op1 - op2;
+result= op2 - op1;
 end
 //------------------------------------- AND ---------------------------------------//
 if(alu_operation[5])
@@ -60,25 +62,25 @@ end
 //------------------------------------- SHL ---------------------------------------//
 if(alu_operation[3])
 begin
- result= op1 << shamt ;
-flag[2]=op1[15-(shamt-1)];
+ result= op2 << shamt ;
+flag[2]=op2[15-(shamt-1)];
 end
 //------------------------------------- SHR ---------------------------------------//
 if(alu_operation[2])
 begin
- result= op1 >> shamt ;
-flag[2]=op1[(shamt-1)];
+ result= op2 >> shamt ;
+flag[2]=op2[(shamt-1)];
 end
 
 //------------------------------------- INC ---------------------------------------//
 if(alu_operation[1])
 begin
- {flag[2],result}= op1 + 1 ;
+ {flag[2],result}= op2 + 1 ;
 end
 //------------------------------------- DEC ---------------------------------------//
 if(alu_operation[0])
 begin
-result= op1 - 1 ;
+result= op2 - 1 ;
 end
 
 

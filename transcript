@@ -1,10 +1,7 @@
-# Load canceled
 # Compile of instruction_memory.v was successful.
-# Compile of read_file.v was successful.
-# 2 compiles, 0 failed with no errors.
 vsim -gui work.instruction_memory
 # vsim -gui work.instruction_memory 
-# Start time: 17:03:38 on Nov 16,2022
+# Start time: 22:41:12 on Nov 16,2022
 # Loading work.instruction_memory
 # Loading work.read_file
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
@@ -12,50 +9,22 @@ vsim -gui work.instruction_memory
 add wave -position end  sim:/instruction_memory/clk
 add wave -position end  sim:/instruction_memory/immediate
 add wave -position end  sim:/instruction_memory/instuction
-add wave -position end  sim:/instruction_memory/pc
+add wave -position end  sim:/instruction_memory/mem
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
-#           Attempting to use alternate WLF file "./wlftzweehs".
+#           Attempting to use alternate WLF file "./wlftfadw3y".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftzweehs
-force -freeze sim:/instruction_memory/clk 1 0, 0 {50 ps} -r 100
-force -freeze sim:/instruction_memory/pc 1 0
-run
-# 0000000000001111
-# 0000000000000011
-# 0000000000001001
-# 0000000000001111
-# 0000000000000011
-# 0000000000001001
-# 0000000000001111
-# 0000000000000011
-# 0000000000001001
-# 0000000000001111
-# 0000000000000011
-# 0000000000001001
-vsim -gui work.instruction_memory
-# End time: 17:05:56 on Nov 16,2022, Elapsed time: 0:02:18
-# Errors: 0, Warnings: 5
-# vsim -gui work.instruction_memory 
-# Start time: 17:05:56 on Nov 16,2022
-# Loading work.instruction_memory
-# Loading work.read_file
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /instruction_memory/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
-add wave -position end  sim:/instruction_memory/clk
-add wave -position end  sim:/instruction_memory/immediate
-add wave -position end  sim:/instruction_memory/instuction
+#           Using alternate file: ./wlftfadw3y
 add wave -position end  sim:/instruction_memory/pc
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
-#           Attempting to use alternate WLF file "./wlftfk65zt".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftfk65zt
 force -freeze sim:/instruction_memory/clk 0 0, 1 {50 ps} -r 100
-force -freeze sim:/instruction_memory/pc 1 0
+force -freeze sim:/instruction_memory/pc 0 0
 run
-# 0000000000001111
+# 0000100000100000
+# 0000000000000111
+# 0000100001000000
 # 0000000000000011
+# 0001100101000000
+# 0000000000000000
 # 0000000000001001
 # 0000000000001111
 # 0000000000000011
@@ -66,42 +35,520 @@ run
 # 0000000000001111
 # 0000000000000011
 # 0000000000001001
-# Error attempted to pushdown all children on .main_pane.cs.36 mode is tabbed children are paneframes 1
-# Error attempted to pushdown all children on .main_pane.cs.36 mode is tabbed children are paneframes 1
-# Error attempted to pushdown all children on .main_pane.cs.36 mode is tabbed children are paneframes 1
-# Error attempted to pushdown all children on .main_pane.cs.36 mode is tabbed children are paneframes 1
-# Compile of instruction_memory.v was successful.
-# Compile of alu.v was successful.
-# Compile of control_unit.v was successful.
-# Compile of instruction_memory.v was successful.
-# Compile of read_file.v was successful.
-# Compile of data_stack_memory.v was successful.
-# Compile of integration_file.v failed with 6 errors.
-# Compile of decode_ciruit.v was successful.
-# Compile of mux_generic.v was successful.
-# Compile of sign_extend.v was successful.
-# 9 compiles, 1 failed with 6 errors.
-# Compile of alu.v was successful.
-# Compile of control_unit.v was successful.
-# Compile of instruction_memory.v was successful.
-# Compile of read_file.v was successful.
-# Compile of data_stack_memory.v was successful.
-# Compile of integration_file.v failed with 2 errors.
-# Compile of decode_ciruit.v was successful.
-# Compile of mux_generic.v was successful.
-# Compile of sign_extend.v was successful.
-# 9 compiles, 1 failed with 2 errors.
-# Compile of alu.v was successful.
-# Compile of control_unit.v was successful.
-# Compile of instruction_memory.v was successful.
-# Compile of read_file.v was successful.
-# Compile of data_stack_memory.v was successful.
-# Compile of integration_file.v failed with 2 errors.
-# Compile of decode_ciruit.v was successful.
-# Compile of mux_generic.v was successful.
-# Compile of sign_extend.v was successful.
-# 9 compiles, 1 failed with 2 errors.
-# Compile of integration_file.v failed with 2 errors.
-# Compile of integration_file.v failed with 1 errors.
-# Compile of integration_file.v failed with 2 errors.
-# Compile of integration_file.v was successful.
+# Compile of integration_phase_1.v was successful.
+vsim -gui work.integration_1
+# End time: 22:43:45 on Nov 16,2022, Elapsed time: 0:02:33
+# Errors: 0, Warnings: 5
+# vsim -gui work.integration_1 
+# Start time: 22:43:45 on Nov 16,2022
+# Loading work.integration_1
+# Loading work.instruction_memory
+# Loading work.read_file
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.alu
+# Loading work.data_stack_memory
+# Loading work.mux_generic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'pc'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 33
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'shamt'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/alu_stage File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 61
+add wave -position end  sim:/integration_1/alu_controls
+add wave -position end  sim:/integration_1/clk
+add wave -position end  sim:/integration_1/cs_alu_op
+add wave -position end  sim:/integration_1/cs_call
+add wave -position end  sim:/integration_1/cs_clrc
+add wave -position end  sim:/integration_1/cs_int
+add wave -position end  sim:/integration_1/cs_jc
+add wave -position end  sim:/integration_1/cs_jmp
+add wave -position end  sim:/integration_1/cs_jn
+add wave -position end  sim:/integration_1/cs_jz
+add wave -position end  sim:/integration_1/cs_ldd
+add wave -position end  sim:/integration_1/cs_ldm
+add wave -position end  sim:/integration_1/cs_mem_op
+add wave -position end  sim:/integration_1/cs_mem_read
+add wave -position end  sim:/integration_1/cs_mem_write
+add wave -position end  sim:/integration_1/CS_NUM
+add wave -position end  sim:/integration_1/cs_pop
+add wave -position end  sim:/integration_1/cs_push
+add wave -position end  sim:/integration_1/cs_reg_write
+add wave -position end  sim:/integration_1/cs_reset
+add wave -position end  sim:/integration_1/cs_ret
+add wave -position end  sim:/integration_1/cs_rti
+add wave -position end  sim:/integration_1/cs_setc
+add wave -position end  sim:/integration_1/cs_std
+add wave -position end  sim:/integration_1/data
+add wave -position end  sim:/integration_1/flag
+add wave -position end  sim:/integration_1/flag_result
+add wave -position end  sim:/integration_1/immediate
+add wave -position end  sim:/integration_1/instuction
+add wave -position end  sim:/integration_1/mem_address
+add wave -position end  sim:/integration_1/Num_alu
+add wave -position end  sim:/integration_1/Num_of_bits
+add wave -position end  sim:/integration_1/Num_of_registers
+add wave -position end  sim:/integration_1/op2
+add wave -position end  sim:/integration_1/op_code_width
+add wave -position end  sim:/integration_1/pc
+add wave -position end  sim:/integration_1/pc_width
+add wave -position end  sim:/integration_1/pop_width
+add wave -position end  sim:/integration_1/read_data1
+add wave -position end  sim:/integration_1/read_data1_result
+add wave -position end  sim:/integration_1/read_data2
+add wave -position end  sim:/integration_1/read_data2_result
+add wave -position end  sim:/integration_1/result
+add wave -position end  sim:/integration_1/selector_1
+add wave -position end  sim:/integration_1/selector_2
+add wave -position end  sim:/integration_1/selector_3
+add wave -position end  sim:/integration_1/selector_4
+add wave -position end  sim:/integration_1/selector_5
+add wave -position end  sim:/integration_1/selector_6
+add wave -position end  sim:/integration_1/selector_7
+add wave -position end  sim:/integration_1/shamt
+add wave -position end  sim:/integration_1/sp
+add wave -position end  sim:/integration_1/sp_jump
+add wave -position end  sim:/integration_1/sp_width
+add wave -position end  sim:/integration_1/value
+add wave -position end  sim:/integration_1/write_data
+add wave -position end  sim:/integration_1/z_value
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlftqxjvmr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqxjvmr
+force -freeze sim:/integration_1/clk 0 0, 1 {50 ps} -r 100
+run
+# 0000100000100000
+# 0000000000000111
+# 0000100001000000
+# 0000000000000011
+# 0001100101000000
+# 0000000000000000
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# Compile of integration_phase_1.v was successful.
+vsim -gui work.integration_1
+# End time: 22:50:34 on Nov 16,2022, Elapsed time: 0:06:49
+# Errors: 0, Warnings: 8
+# vsim -gui work.integration_1 
+# Start time: 22:50:34 on Nov 16,2022
+# Loading work.integration_1
+# Loading work.instruction_memory
+# Loading work.read_file
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.alu
+# Loading work.data_stack_memory
+# Loading work.mux_generic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'shamt'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/alu_stage File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 61
+add wave -position end  sim:/integration_1/alu_controls
+add wave -position end  sim:/integration_1/clk
+add wave -position end  sim:/integration_1/cs_alu_op
+add wave -position end  sim:/integration_1/cs_call
+add wave -position end  sim:/integration_1/cs_clrc
+add wave -position end  sim:/integration_1/cs_int
+add wave -position end  sim:/integration_1/cs_jc
+add wave -position end  sim:/integration_1/cs_jmp
+add wave -position end  sim:/integration_1/cs_jn
+add wave -position end  sim:/integration_1/cs_jz
+add wave -position end  sim:/integration_1/cs_ldd
+add wave -position end  sim:/integration_1/cs_ldm
+add wave -position end  sim:/integration_1/cs_mem_op
+add wave -position end  sim:/integration_1/cs_mem_read
+add wave -position end  sim:/integration_1/cs_mem_write
+add wave -position end  sim:/integration_1/CS_NUM
+add wave -position end  sim:/integration_1/cs_pop
+add wave -position end  sim:/integration_1/cs_push
+add wave -position end  sim:/integration_1/cs_reg_write
+add wave -position end  sim:/integration_1/cs_reset
+add wave -position end  sim:/integration_1/cs_ret
+add wave -position end  sim:/integration_1/cs_rti
+add wave -position end  sim:/integration_1/cs_setc
+add wave -position end  sim:/integration_1/cs_std
+add wave -position end  sim:/integration_1/data
+add wave -position end  sim:/integration_1/flag
+add wave -position end  sim:/integration_1/flag_result
+add wave -position end  sim:/integration_1/immediate
+add wave -position end  sim:/integration_1/instuction
+add wave -position end  sim:/integration_1/mem_address
+add wave -position end  sim:/integration_1/Num_alu
+add wave -position end  sim:/integration_1/Num_of_bits
+add wave -position end  sim:/integration_1/Num_of_registers
+add wave -position end  sim:/integration_1/op2
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlft8s6idt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8s6idt
+add wave -position end  sim:/integration_1/op_code_width
+add wave -position end  sim:/integration_1/pc
+add wave -position end  sim:/integration_1/pc_width
+add wave -position end  sim:/integration_1/pop_width
+add wave -position end  sim:/integration_1/read_data1
+add wave -position end  sim:/integration_1/read_data1_result
+add wave -position end  sim:/integration_1/read_data2
+add wave -position end  sim:/integration_1/read_data2_result
+add wave -position end  sim:/integration_1/result
+add wave -position end  sim:/integration_1/selector_1
+add wave -position end  sim:/integration_1/selector_2
+add wave -position end  sim:/integration_1/selector_3
+add wave -position end  sim:/integration_1/selector_4
+add wave -position end  sim:/integration_1/selector_5
+add wave -position end  sim:/integration_1/selector_6
+add wave -position end  sim:/integration_1/selector_7
+add wave -position end  sim:/integration_1/shamt
+add wave -position end  sim:/integration_1/sp
+add wave -position end  sim:/integration_1/sp_jump
+add wave -position end  sim:/integration_1/sp_width
+add wave -position end  sim:/integration_1/value
+add wave -position end  sim:/integration_1/write_data
+add wave -position end  sim:/integration_1/z_value
+run
+# 0000100000100000
+# 0000000000000111
+# 0000100001000000
+# 0000000000000011
+# 0001100101000000
+# 0000000000000000
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+vsim -gui work.integration_1
+# End time: 22:52:37 on Nov 16,2022, Elapsed time: 0:02:03
+# Errors: 0, Warnings: 5
+# vsim -gui work.integration_1 
+# Start time: 22:52:37 on Nov 16,2022
+# Loading work.integration_1
+# Loading work.instruction_memory
+# Loading work.read_file
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.alu
+# Loading work.data_stack_memory
+# Loading work.mux_generic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'shamt'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/alu_stage File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 61
+add wave -position end  sim:/integration_1/alu_controls
+add wave -position end  sim:/integration_1/clk
+add wave -position end  sim:/integration_1/cs_alu_op
+add wave -position end  sim:/integration_1/cs_call
+add wave -position end  sim:/integration_1/cs_clrc
+add wave -position end  sim:/integration_1/cs_int
+add wave -position end  sim:/integration_1/cs_jc
+add wave -position end  sim:/integration_1/cs_jmp
+add wave -position end  sim:/integration_1/cs_jn
+add wave -position end  sim:/integration_1/cs_jz
+add wave -position end  sim:/integration_1/cs_ldd
+add wave -position end  sim:/integration_1/cs_ldm
+add wave -position end  sim:/integration_1/cs_mem_op
+add wave -position end  sim:/integration_1/cs_mem_read
+add wave -position end  sim:/integration_1/cs_mem_write
+add wave -position end  sim:/integration_1/CS_NUM
+add wave -position end  sim:/integration_1/cs_pop
+add wave -position end  sim:/integration_1/cs_push
+add wave -position end  sim:/integration_1/cs_reg_write
+add wave -position end  sim:/integration_1/cs_reset
+add wave -position end  sim:/integration_1/cs_ret
+add wave -position end  sim:/integration_1/cs_rti
+add wave -position end  sim:/integration_1/cs_setc
+add wave -position end  sim:/integration_1/cs_std
+add wave -position end  sim:/integration_1/data
+add wave -position end  sim:/integration_1/flag
+add wave -position end  sim:/integration_1/flag_result
+add wave -position end  sim:/integration_1/immediate
+add wave -position end  sim:/integration_1/instuction
+add wave -position end  sim:/integration_1/mem_address
+add wave -position end  sim:/integration_1/Num_alu
+add wave -position end  sim:/integration_1/Num_of_bits
+add wave -position end  sim:/integration_1/Num_of_registers
+add wave -position end  sim:/integration_1/op2
+add wave -position end  sim:/integration_1/op_code_width
+add wave -position end  sim:/integration_1/pc
+add wave -position end  sim:/integration_1/pc_width
+add wave -position end  sim:/integration_1/pop_width
+add wave -position end  sim:/integration_1/read_data1
+add wave -position end  sim:/integration_1/read_data1_result
+add wave -position end  sim:/integration_1/read_data2
+add wave -position end  sim:/integration_1/read_data2_result
+add wave -position end  sim:/integration_1/result
+add wave -position end  sim:/integration_1/selector_1
+add wave -position end  sim:/integration_1/selector_2
+add wave -position end  sim:/integration_1/selector_3
+add wave -position end  sim:/integration_1/selector_4
+add wave -position end  sim:/integration_1/selector_5
+add wave -position end  sim:/integration_1/selector_6
+add wave -position end  sim:/integration_1/selector_7
+add wave -position end  sim:/integration_1/shamt
+add wave -position end  sim:/integration_1/sp
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlftqv2msx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqv2msx
+add wave -position end  sim:/integration_1/sp_jump
+add wave -position end  sim:/integration_1/sp_width
+add wave -position end  sim:/integration_1/value
+add wave -position end  sim:/integration_1/write_data
+add wave -position end  sim:/integration_1/z_value
+force -freeze sim:/integration_1/clk 0 0, 1 {50 ps} -r 100
+run
+# 0000100000100000
+# 0000000000000111
+# 0000100001000000
+# 0000000000000011
+# 0001100101000000
+# 0000000000000000
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# Compile of integration_phase_1.v was successful.
+vsim -gui work.integration_1
+# End time: 23:01:07 on Nov 16,2022, Elapsed time: 0:08:30
+# Errors: 0, Warnings: 6
+# vsim -gui work.integration_1 
+# Start time: 23:01:07 on Nov 16,2022
+# Loading work.integration_1
+# Loading work.instruction_memory
+# Loading work.read_file
+# Loading work.mux_generic
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.alu
+# Loading work.data_stack_memory
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'sel'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/mux_1 File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 45
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'out'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/mux_1 File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 45
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'shamt'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/alu_stage File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 65
+# Error loading design
+# End time: 23:01:07 on Nov 16,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 4
+# Compile of integration_phase_1.v was successful.
+vsim -gui work.integration_1
+# vsim -gui work.integration_1 
+# Start time: 23:01:49 on Nov 16,2022
+# Loading work.integration_1
+# Loading work.instruction_memory
+# Loading work.read_file
+# Loading work.mux_generic
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.alu
+# Loading work.data_stack_memory
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'sel'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/mux_1 File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 46
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'shamt'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/alu_stage File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 66
+add wave -position end  sim:/integration_1/alu_controls
+add wave -position end  sim:/integration_1/clk
+add wave -position end  sim:/integration_1/cs_alu_op
+add wave -position end  sim:/integration_1/cs_call
+add wave -position end  sim:/integration_1/cs_clrc
+add wave -position end  sim:/integration_1/cs_int
+add wave -position end  sim:/integration_1/cs_jc
+add wave -position end  sim:/integration_1/cs_jmp
+add wave -position end  sim:/integration_1/cs_jn
+add wave -position end  sim:/integration_1/cs_jz
+add wave -position end  sim:/integration_1/cs_ldd
+add wave -position end  sim:/integration_1/cs_ldm
+add wave -position end  sim:/integration_1/cs_mem_op
+add wave -position end  sim:/integration_1/cs_mem_read
+add wave -position end  sim:/integration_1/cs_mem_write
+add wave -position end  sim:/integration_1/CS_NUM
+add wave -position end  sim:/integration_1/cs_pop
+add wave -position end  sim:/integration_1/cs_push
+add wave -position end  sim:/integration_1/cs_reg_write
+add wave -position end  sim:/integration_1/cs_reset
+add wave -position end  sim:/integration_1/cs_ret
+add wave -position end  sim:/integration_1/cs_rti
+add wave -position end  sim:/integration_1/cs_setc
+add wave -position end  sim:/integration_1/cs_std
+add wave -position end  sim:/integration_1/data
+add wave -position end  sim:/integration_1/flag
+add wave -position end  sim:/integration_1/flag_result
+add wave -position end  sim:/integration_1/immediate
+add wave -position end  sim:/integration_1/instuction
+add wave -position end  sim:/integration_1/mem_address
+add wave -position end  sim:/integration_1/Num_alu
+add wave -position end  sim:/integration_1/Num_of_bits
+add wave -position end  sim:/integration_1/Num_of_registers
+add wave -position end  sim:/integration_1/op2
+add wave -position end  sim:/integration_1/op_code_width
+add wave -position end  sim:/integration_1/pc
+add wave -position end  sim:/integration_1/pc_modified
+add wave -position end  sim:/integration_1/pc_width
+add wave -position end  sim:/integration_1/pop_width
+add wave -position end  sim:/integration_1/read_data1
+add wave -position end  sim:/integration_1/read_data1_result
+add wave -position end  sim:/integration_1/read_data2
+add wave -position end  sim:/integration_1/read_data2_result
+add wave -position end  sim:/integration_1/result
+add wave -position end  sim:/integration_1/selector_1
+add wave -position end  sim:/integration_1/selector_2
+add wave -position end  sim:/integration_1/selector_3
+add wave -position end  sim:/integration_1/selector_4
+add wave -position end  sim:/integration_1/selector_5
+add wave -position end  sim:/integration_1/selector_6
+add wave -position end  sim:/integration_1/selector_7
+add wave -position end  sim:/integration_1/shamt
+add wave -position end  sim:/integration_1/sp
+add wave -position end  sim:/integration_1/sp_jump
+add wave -position end  sim:/integration_1/sp_width
+add wave -position end  sim:/integration_1/value
+add wave -position end  sim:/integration_1/write_data
+add wave -position end  sim:/integration_1/z_value
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlft3qgd93".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3qgd93
+run
+# 0000100000100000
+# 0000000000000111
+# 0000100001000000
+# 0000000000000011
+# 0001100101000000
+# 0000000000000000
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+vsim -gui work.integration_1
+# End time: 23:02:19 on Nov 16,2022, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 7
+# vsim -gui work.integration_1 
+# Start time: 23:02:19 on Nov 16,2022
+# Loading work.integration_1
+# Loading work.instruction_memory
+# Loading work.read_file
+# Loading work.mux_generic
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.alu
+# Loading work.data_stack_memory
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'sel'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/mux_1 File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 46
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (1) for port 'shamt'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/alu_stage File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v Line: 66
+add wave -position end  sim:/integration_1/alu_controls
+add wave -position end  sim:/integration_1/clk
+add wave -position end  sim:/integration_1/cs_alu_op
+add wave -position end  sim:/integration_1/cs_call
+add wave -position end  sim:/integration_1/cs_clrc
+add wave -position end  sim:/integration_1/cs_int
+add wave -position end  sim:/integration_1/cs_jc
+add wave -position end  sim:/integration_1/cs_jmp
+add wave -position end  sim:/integration_1/cs_jn
+add wave -position end  sim:/integration_1/cs_jz
+add wave -position end  sim:/integration_1/cs_ldd
+add wave -position end  sim:/integration_1/cs_ldm
+add wave -position end  sim:/integration_1/cs_mem_op
+add wave -position end  sim:/integration_1/cs_mem_read
+add wave -position end  sim:/integration_1/cs_mem_write
+add wave -position end  sim:/integration_1/CS_NUM
+add wave -position end  sim:/integration_1/cs_pop
+add wave -position end  sim:/integration_1/cs_push
+add wave -position end  sim:/integration_1/cs_reg_write
+add wave -position end  sim:/integration_1/cs_reset
+add wave -position end  sim:/integration_1/cs_ret
+add wave -position end  sim:/integration_1/cs_rti
+add wave -position end  sim:/integration_1/cs_setc
+add wave -position end  sim:/integration_1/cs_std
+add wave -position end  sim:/integration_1/data
+add wave -position end  sim:/integration_1/flag
+add wave -position end  sim:/integration_1/flag_result
+add wave -position end  sim:/integration_1/immediate
+add wave -position end  sim:/integration_1/instuction
+add wave -position end  sim:/integration_1/mem_address
+add wave -position end  sim:/integration_1/Num_alu
+add wave -position end  sim:/integration_1/Num_of_bits
+add wave -position end  sim:/integration_1/Num_of_registers
+add wave -position end  sim:/integration_1/op2
+add wave -position end  sim:/integration_1/op_code_width
+add wave -position end  sim:/integration_1/pc
+add wave -position end  sim:/integration_1/pc_modified
+add wave -position end  sim:/integration_1/pc_width
+add wave -position end  sim:/integration_1/pop_width
+add wave -position end  sim:/integration_1/read_data1
+add wave -position end  sim:/integration_1/read_data1_result
+add wave -position end  sim:/integration_1/read_data2
+add wave -position end  sim:/integration_1/read_data2_result
+add wave -position end  sim:/integration_1/result
+add wave -position end  sim:/integration_1/selector_1
+add wave -position end  sim:/integration_1/selector_2
+add wave -position end  sim:/integration_1/selector_3
+add wave -position end  sim:/integration_1/selector_4
+add wave -position end  sim:/integration_1/selector_5
+add wave -position end  sim:/integration_1/selector_6
+add wave -position end  sim:/integration_1/selector_7
+add wave -position end  sim:/integration_1/shamt
+add wave -position end  sim:/integration_1/sp
+add wave -position end  sim:/integration_1/sp_jump
+add wave -position end  sim:/integration_1/sp_width
+add wave -position end  sim:/integration_1/value
+add wave -position end  sim:/integration_1/write_data
+add wave -position end  sim:/integration_1/z_value
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlftjnk5jb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjnk5jb
+force -freeze sim:/integration_1/clk 0 0, 1 {50 ps} -r 100
+run
+# 0000100000100000
+# 0000000000000111
+# 0000100001000000
+# 0000000000000011
+# 0001100101000000
+# 0000000000000000
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001

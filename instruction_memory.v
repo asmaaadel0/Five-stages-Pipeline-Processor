@@ -11,6 +11,7 @@ module instruction_memory #(parameter Num_of_bits=16, pc_width=32, Num_of_regist
     integer i;
 
     always @(posedge clk)
+	//always @(*)
     begin
         instuction <= mem[pc];		
 		immediate  <= mem[pc+1];			

@@ -33,7 +33,7 @@ instruction_memory #(Num_of_bits,pc_width,Num_of_registers) inst_mem_stage ( .cl
 //if we change pop width to be 16bit we have to change input 'data' this in mux
 mux_generic_2bit_selector #(32) mux_1(0, 2**5, data, pc+1, selector_1, pc);
 
-control_unit #(op_code_width,Num_alu,CS_NUM)((instuction[op_code_width-1:0]),alu_controls,cs_push,cs_pop,cs_ldm,cs_ldd,cs_std,cs_jz,cs_jn,
+control_unit #(op_code_width,Num_alu,CS_NUM)((instuction[Num_of_bits-1:Num_of_bits-op_code_width]),alu_controls,cs_push,cs_pop,cs_ldm,cs_ldd,cs_std,cs_jz,cs_jn,
                         cs_jc,cs_jmp,cs_call,cs_ret,cs_rti,cs_setc,cs_clrc,cs_mem_read,cs_mem_write,cs_reg_write,cs_int,cs_reset,
                         cs_alu_op,cs_mem_op);
 
@@ -56,7 +56,7 @@ sign_extend extend_2(flag,flag_result);
 
 sign_extend extend_3(read_data1,read_data1_result);
 
-mux_generic_2bit_selector #(pop_width) mux_4(flag_result, pc, read_data1, z_value, selector_4, value);
+mux_generic_2bit_selector #(pop_width) mux_4(flag_result, pc, read_data1_result, z_value, selector_4, value);
 
 data_stack_memory #(16,sp_width,11) memory_stage (.clk(clk) ,.write_enable(cs_mem_write),.read_enable(cs_mem_read),
                                             .write_data(value) ,.address(mem_address),.read_data(data));

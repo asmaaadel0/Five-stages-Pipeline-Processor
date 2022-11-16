@@ -5,7 +5,8 @@ module decode_ciruit #(parameter data_width=16,address_width=3)
 
 reg [(data_width-1):0] array_reg [2**address_width-1:0];
 integer i;
-always @(posedge clk )
+//always @(posedge clk )
+always @(*)
  begin
 
 if(write_enable)
@@ -13,7 +14,8 @@ if(write_enable)
 
  end
 
-always @(negedge clk )
+//always @(negedge clk )
+always @(*)
  begin
 
  
