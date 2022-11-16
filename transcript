@@ -1,28 +1,45 @@
-# Compile of control-unit.v failed with 1 errors.
-# Compile of control-unit.v failed with 1 errors.
-# Compile of control-unit.v failed with 1 errors.
-# Compile of control-unit.v failed with 1 errors.
+# Load canceled
 # Compile of control-unit.v was successful.
-# Compile of control-unit.v failed with 1 errors.
-# Compile of control-unit.v failed with 2 errors.
-# Compile of control-unit.v failed with 6 errors.
-# Compile of control-unit.v was successful.
-vsim -gui work.control_unit
-# vsim -gui work.control_unit 
-# Start time: 18:59:27 on Nov 15,2022
-# Loading work.control_unit
-add wave -position end  sim:/control_unit/alu_controls
-add wave -position end  sim:/control_unit/cs
-add wave -position end  sim:/control_unit/op_code
-force -freeze sim:/control_unit/op_code 1 0
+# Compile of instruction-memory.v was successful.
+# Compile of read_file.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.instruction_memory
+# vsim -gui work.instruction_memory 
+# Start time: 11:38:44 on Nov 16,2022
+# Loading work.instruction_memory
+# Loading work.read_file
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /instruction_memory/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+add wave -position end  sim:/instruction_memory/clk
+add wave -position end  sim:/instruction_memory/mem
+add wave -position end  sim:/instruction_memory/pc
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlftn2dj9h".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftn2dj9h
 run
-add wave -position end  sim:/control_unit/cs_alu_op
-add wave -position end  sim:/control_unit/cs_call
-add wave -position end  sim:/control_unit/cs_reg_write
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+# 0000000000001111
+# 0000000000000011
+# 0000000000001001
+noforce sim:/instruction_memory/clk
+noforce sim:/instruction_memory/clk
+force -freeze sim:/instruction_memory/clk 1 0, 0 {50 ps} -r 100
 run
-force -freeze sim:/control_unit/op_code 00010 0
+force -freeze sim:/instruction_memory/pc 1 0
 run
-add wave -position end  sim:/control_unit/cs_mem_op
 run
-force -freeze sim:/control_unit/op_code 00101 0
-run
+add wave -position end  sim:/instruction_memory/immediate
+add wave -position end  sim:/instruction_memory/instuction
+run -all
+# End time: 11:43:55 on Nov 16,2022, Elapsed time: 0:05:11
+# Errors: 0, Warnings: 5

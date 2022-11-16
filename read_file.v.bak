@@ -1,0 +1,28 @@
+//module read_file();
+
+//	integer read_data;
+	
+//	initial begin 
+//		read_data = $fopen("inst_mem.txt");
+//		if(!read_data) $display("not opened");
+//		else           $display(read_data);
+//		$fclose(read_data);
+//	end
+//endmodule	
+
+module tb();
+
+    reg [7:0] A [0:15]; //memory declaration for storing the contents of file.
+    integer i;  //index used in "for" loop
+
+initial begin
+    //read the contents of the file A_hex.txt as hexadecimal values into memory "A".
+    $readmemh("inst_mem.txt",A);
+	
+    $display(A);  //write as decimal
+    
+
+    #100;
+    $stop;
+end
+endmodule 

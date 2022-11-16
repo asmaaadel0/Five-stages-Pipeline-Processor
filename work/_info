@@ -10,25 +10,94 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 vcontrol_unit
-!s110 1668531558
+Z0 !s110 1668591516
 !i10b 1
 !s100 Y]@n9X?b7XcDR4bSI@O6F3
-!s11b Dg1SIo80bB@j0V0VzS_@n1
-I22A3BVQCd_Yj;M4]fe?5j3
-VDg1SIo80bB@j0V0VzS_@n1
-dD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I:B<LTH9HNl`lc5I54:O:h3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor
 w1668531553
-8D:\CUFE24\3rd year\first term\Computer Architecture\Five-stages-Pipeline-Processor\control-unit.v
-FD:\CUFE24\3rd year\first term\Computer Architecture\Five-stages-Pipeline-Processor\control-unit.v
-!i122 1
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control-unit.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control-unit.v
+!i122 31
 L0 1 56
-OV;L;2020.1;71
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1668531558.000000
-!s107 D:\CUFE24\3rd year\first term\Computer Architecture\Five-stages-Pipeline-Processor\control-unit.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:\CUFE24\3rd year\first term\Computer Architecture\Five-stages-Pipeline-Processor\control-unit.v|
+Z5 !s108 1668591516.000000
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control-unit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control-unit.v|
 !i113 1
-o-work work
-tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
+vinstruction_memory
+R0
+!i10b 1
+!s100 _o<Y4<meTV[F_YC;zoJTN1
+R1
+I@VcGQ>[c]FW3aQNN0[?1=0
+R2
+R3
+w1668591498
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction-memory.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction-memory.v
+!i122 32
+L0 1 19
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction-memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction-memory.v|
+!i113 1
+R6
+R7
+vread_file
+R0
+!i10b 1
+!s100 jHAo0ALiHlXIU]Fo3W5<n3
+R1
+IiF6F[bPdZfIH`mbVUoIa@2
+R2
+R3
+w1668591057
+Z8 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v
+Z9 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v
+!i122 33
+L0 1 22
+R4
+r1
+!s85 0
+31
+R5
+Z10 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v|
+Z11 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v|
+!i113 1
+R6
+R7
+vtb
+!s110 1668589757
+!i10b 1
+!s100 ;B`MlJF:Yem0<g>84Mg293
+R1
+I@_@K>SOn;G?89zSS7o=EY2
+R2
+R3
+w1668589752
+R8
+R9
+!i122 23
+L0 13 27
+R4
+r1
+!s85 0
+31
+!s108 1668589757.000000
+R10
+R11
+!i113 1
+R6
+R7
