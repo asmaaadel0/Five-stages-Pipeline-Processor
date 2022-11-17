@@ -10,8 +10,8 @@ module alu(
     
     );
 
-//always @(posedge clk) 
-always @(*)
+always @(posedge clk) 
+// always @(*)
 begin
 //------------------------------------- OUT ---------------------------------------//
 if(alu_operation[12])

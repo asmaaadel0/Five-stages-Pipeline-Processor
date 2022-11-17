@@ -21,8 +21,8 @@ if(write_enable)
 
  end
 
-always @(negedge clk )
-// always @(*)
+// always @(negedge clk )
+always @(*)
  begin
 
  
