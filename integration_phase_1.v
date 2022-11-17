@@ -6,7 +6,7 @@ localparam sp_width=32;
 localparam op_code_width=5;
 localparam Num_alu=13; //number of alu instructions
 localparam CS_NUM=34; //number of signals with alu instruction
-localparam pop_width=32; //pop width
+localparam pop_width=16; //pop width
 //wire pc=2**5; //how to fill instraction from 0 to 2**5 to start from 2**5
 //reg pc=2**5;
 reg [pc_width-1:0] pc=0;
@@ -142,9 +142,10 @@ assign mem_address = read_data2_result;
 //sign_extend extend_2(flag,flag_result);
 
 //delete
-sign_extend extend_3(e_read_data1,read_data1_result);
+// sign_extend extend_3(e_read_data1,read_data1_result);
 
-assign value = read_data1_result;
+// assign value = read_data1_result;
+assign value = e_read_data1;
 //delete
 //mux_generic_2bit_selector #(pop_width) mux_4(flag_result, pc, read_data1_result, z_value, selector_4, value);
 
