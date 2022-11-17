@@ -64,23 +64,24 @@ wire m_reg_write,m_push,m_pop,m_ldm,m_ldd,
     
 
 
-instruction_memory #(Num_of_bits,pc_width,Num_of_registers) inst_mem_stage ( .clk(clk),.cs_ldm(cs_ldm),.pc(pc), .instuction(instuction),.immediate(immediate));
+instruction_memory #(Num_of_bits,pc_width,Num_of_registers) inst_mem_stage ( .clk(clk),.cs_ldm(cs_ldm),.pc(pc), .instuction(instuction));//.immediate(immediate)
 
 //16 for instruction, 16 for immediate
-buffer #(32)buffer_fetch(.read_data({instuction_f,immediate_f}), .write_data({instuction,immediate}),.clk(clk));
+// buffer #(32)buffer_fetch(.read_data({instuction_f,immediate_f}), .write_data({instuction,immediate}),.clk(clk));
+buffer #(16)buffer_fetch(.read_data(instuction_f), .write_data(instuction),.clk(clk));
 
 always@(negedge clk)
 begin 
-pc <= pc_modified;
-// pc = pc + 1;
+// pc <= pc_modified;
+pc = pc + 1;
 end
 //delete
 //if we change pop width to be 16bit we have to change input 'data' this in mux
 //mux_generic_2bit_selector #(32) mux_1(0, 2**5, data, pc+1, selector_1, pc);
 
 //equation of this selector for phase 1	
-assign selector_1 = ~cs_ldm;
-mux_generic #(32) mux_1(pc+1, pc+2, 1, pc_modified);
+// assign selector_1 = ~cs_ldm;
+// mux_generic #(32) mux_1(pc+1, pc+2, 1, pc_modified);
 
 
 control_unit #(op_code_width,Num_alu,CS_NUM) cont_unit((instuction_f[Num_of_bits-1:Num_of_bits-op_code_width]),alu_controls,cs_push,cs_pop,
@@ -97,12 +98,12 @@ decode_ciruit #(16,3) decode_stage (.clk(clk) ,.write_enable(m_reg_write),.write
 							  .read_data1(read_data1), .read_data2(read_data2));
 
 //3 for read_add_2(write address),16 for immediate,16 for read_data1, 16 for read_data2,34 controls
-buffer #(89)buffer_decode(.read_data({d_read_add_2,d_read_data1,d_read_data2,d_shamt,d_immediate,d_alu_controls,d_push,d_pop,
+buffer #(89)buffer_decode(.read_data({d_immediate,d_read_add_2,d_read_data1,d_read_data2,d_shamt,d_alu_controls,d_push,d_pop,
                                    d_ldm,d_ldd,d_std,d_jz,d_jn,d_jc,d_jmp,d_call,
                                    d_ret,d_rti,d_setc,d_clrc,d_mem_read,d_mem_write,
                                    d_reg_write,d_int,d_reset,d_alu_op,d_mem_op}), 
-                                   .write_data({read_add_2,read_data1,read_data2,instuction_f[Num_of_bits-op_code_width-7:Num_of_bits-op_code_width-10],
-                                   immediate_f,alu_controls,cs_push,cs_pop,                                            
+                                   .write_data({instuction,read_add_2,read_data1,read_data2,instuction_f[Num_of_bits-op_code_width-7:Num_of_bits-op_code_width-10],
+                                   alu_controls,cs_push,cs_pop,                                            
                                    cs_ldm,cs_ldd,cs_std,cs_jz,cs_jn,cs_jc,cs_jmp,cs_call,
                                    cs_ret,cs_rti,cs_setc,cs_clrc,cs_mem_read,cs_mem_write,
                                    cs_reg_write,cs_int,cs_reset,cs_alu_op,cs_mem_op}),.clk(clk));

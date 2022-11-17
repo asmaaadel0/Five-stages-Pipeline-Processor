@@ -1813,3 +1813,55 @@ run
 # 0010100000000000
 # 0001000101000000
 # 0000000000000111
+# Compile of instruction_memory.v failed with 1 errors.
+# Compile of instruction_memory.v was successful.
+# Compile of integration_phase_1.v failed with 1 errors.
+# Compile of integration_phase_1.v was successful.
+# Compile of integration_phase_1.v was successful.
+vsim -gui work.integration_1
+# End time: 21:42:56 on Nov 17,2022, Elapsed time: 0:16:48
+# Errors: 0, Warnings: 10
+# vsim -gui work.integration_1 
+# Start time: 21:42:56 on Nov 17,2022
+# Loading work.integration_1
+# Loading work.instruction_memory
+# Loading work.read_file
+# Loading work.buffer
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.alu
+# Loading work.sign_extend
+# Loading work.data_stack_memory
+# Loading work.mux_generic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+add wave -position end  sim:/integration_1/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlftbsivfa".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbsivfa
+add wave -position end  sim:/integration_1/memory_stage/array_reg
+force -freeze sim:/integration_1/clk 0 0, 1 {50 ps} -r 100
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+add wave -position end  sim:/integration_1/result
+force -freeze sim:/integration_1/clk 0 0, 1 {50 ps} -r 100
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# 0000000000000000
+# 0000000000000000
+# 0000100000100000
+# 0000000000000001
+# 0000100001000000
+# 0000000000000010
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001100101000000
+# 0000000000000111

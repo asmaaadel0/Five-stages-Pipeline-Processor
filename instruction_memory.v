@@ -2,8 +2,8 @@ module instruction_memory #(parameter Num_of_bits=16, pc_width=32, Num_of_regist
            (input clk,
             input cs_ldm,
             input [pc_width-1:0]pc,
-            output reg [Num_of_bits-1:0]instuction,
-			output reg [Num_of_bits-1:0]immediate
+            output reg [Num_of_bits-1:0]instuction//,
+			// output reg [Num_of_bits-1:0]immediate
 			);
 
     wire [Num_of_bits-1:0]mem[2**Num_of_registers-1:0];
@@ -16,7 +16,7 @@ module instruction_memory #(parameter Num_of_bits=16, pc_width=32, Num_of_regist
 	//always @(*)
     begin
         instuction = mem[pc];		
-		immediate  = mem[pc+1];	
+		// immediate  = mem[pc+1];	
         // pc <= pc +1;		
     end
 
