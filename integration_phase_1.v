@@ -10,7 +10,7 @@ localparam pop_width=32; //pop width
 //wire pc=2**5; //how to fill instraction from 0 to 2**5 to start from 2**5
 //reg pc=2**5;
 reg [pc_width-1:0] pc=0;
-wire [pc_width-1:0] pc_modified=0;
+wire [pc_width-1:0] pc_modified;
 wire [sp_width-1:0] sp=2**11 -1;
 wire clk;
 wire [Num_of_bits-1:0] instuction, immediate;
@@ -35,7 +35,7 @@ instruction_memory #(Num_of_bits,pc_width,Num_of_registers) inst_mem_stage ( .cl
 
 always@(negedge clk)
 begin 
-pc = pc_modified;
+pc <= pc_modified;
 end
 //delete
 //if we change pop width to be 16bit we have to change input 'data' this in mux
@@ -43,13 +43,14 @@ end
 
 //equation of this selector for phase 1	
 assign selector_1 = ~cs_ldm;
-mux_generic #(32) mux_1(pc+1, pc+2, selector_1, pc_modified);
+mux_generic #(32) mux_1(pc+1, pc+2, 1, pc_modified);
 
 
 control_unit #(op_code_width,Num_alu,CS_NUM) cont_unit((instuction[Num_of_bits-1:Num_of_bits-op_code_width]),alu_controls,cs_push,cs_pop,
                                               cs_ldm,cs_ldd,cs_std,cs_jz,cs_jn,cs_jc,cs_jmp,cs_call,cs_ret,cs_rti,cs_setc,cs_clrc,
 											  cs_mem_read,cs_mem_write,cs_reg_write,cs_int,cs_reset,cs_alu_op,cs_mem_op);
 
+/*
 decode_ciruit #(16,3) decode_stage (.clk(clk) ,.write_enable(cs_reg_write),.write_data(write_data),
                               .write_address(instuction[Num_of_bits-op_code_width-4:Num_of_bits-op_code_width-6]), //7:5
 							  .read_address1(instuction[Num_of_bits-op_code_width-1:Num_of_bits-op_code_width-3]), //10:8
@@ -97,5 +98,5 @@ assign selector_3 = cs_ldm;
 mux_generic #(16) mux_3(result, immediate, selector_3, write_data);
 //delete	
 //mux_generic_2bit_selector #(16) mux_3(result, immediate, data[pop_width-1:pop_width-16],z_value, selector_3, write_data);
-
+*/
 endmodule

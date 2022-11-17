@@ -1,9 +1,9 @@
-{D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v}
+{D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module instruction_memory
+-- Compiling module alu
 
 Top level modules:
-	instruction_memory
+	alu
 
 } {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -14,33 +14,12 @@ Top level modules:
 	mux_generic
 	mux_generic_2bit_selector
 
-} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v}
+} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module alu
+-- Compiling module instruction_memory
 
 Top level modules:
-	alu
-
-} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module read_file
-
-Top level modules:
-	read_file
-
-} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/data_stack_memory.v} {1 {vlog -work work -stats=none {D:\CUFE24\3rd year\first term\Computer Architecture\Five-stages-Pipeline-Processor\data_stack_memory.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module data_stack_memory
-
-Top level modules:
-	data_stack_memory
-
-} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_file.v} {1 {vlog -work work -stats=none {D:\CUFE24\3rd year\first term\Computer Architecture\Five-stages-Pipeline-Processor\integration_file.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module integration
-
-Top level modules:
-	integration
+	instruction_memory
 
 } {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/decode_ciruit.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/decode_ciruit.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -49,12 +28,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	decode_ciruit
 
-} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control_unit.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control_unit.v}
+} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_file.v} {1 {vlog -work work -stats=none {D:\CUFE24\3rd year\first term\Computer Architecture\Five-stages-Pipeline-Processor\integration_file.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module control_unit
+-- Compiling module integration
 
 Top level modules:
-	control_unit
+	integration
+
+} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/data_stack_memory.v} {1 {vlog -work work -stats=none {D:\CUFE24\3rd year\first term\Computer Architecture\Five-stages-Pipeline-Processor\data_stack_memory.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module data_stack_memory
+
+Top level modules:
+	data_stack_memory
+
+} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module read_file
+
+Top level modules:
+	read_file
 
 } {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/sign_extend.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/sign_extend.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -62,5 +55,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	sign_extend
+
+} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control_unit.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control_unit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module control_unit
+
+Top level modules:
+	control_unit
 
 } {} {}}
