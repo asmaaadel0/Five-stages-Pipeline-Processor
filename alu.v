@@ -33,54 +33,56 @@ begin
 result= ~op2;
 
 end
-//------------------------------------- MOV ---------------------------------------//
+
+
+//------------------------------------- INC ---------------------------------------//
 if(alu_operation[8])
+begin
+ {flag[2],result}= op2 + 1 ;
+end
+//------------------------------------- DEC ---------------------------------------//
+if(alu_operation[7])
+begin
+result= op2 - 1 ;
+end
+
+//------------------------------------- MOV ---------------------------------------//
+if(alu_operation[6])
 begin
 result=op1;
 end
 //------------------------------------- ADD ---------------------------------------//
-if(alu_operation[7])
+if(alu_operation[5])
 begin
 {flag[2],result}= op1 + op2;
 end
 //------------------------------------- SUB ---------------------------------------//
-if(alu_operation[6])
+if(alu_operation[4])
 begin
 //result= op1 - op2;
 result= op2 - op1;
 end
 //------------------------------------- AND ---------------------------------------//
-if(alu_operation[5])
+if(alu_operation[3])
 begin
  result= op1 & op2;
 end
 //------------------------------------- OR ---------------------------------------//
-if(alu_operation[4])
+if(alu_operation[2])
 begin
  result= op1 | op2;
 end
 //------------------------------------- SHL ---------------------------------------//
-if(alu_operation[3])
+if(alu_operation[1])
 begin
  result= op2 << shamt ;
 flag[2]=op2[15-(shamt-1)];
 end
 //------------------------------------- SHR ---------------------------------------//
-if(alu_operation[2])
+if(alu_operation[0])
 begin
  result= op2 >> shamt ;
 flag[2]=op2[(shamt-1)];
-end
-
-//------------------------------------- INC ---------------------------------------//
-if(alu_operation[1])
-begin
- {flag[2],result}= op2 + 1 ;
-end
-//------------------------------------- DEC ---------------------------------------//
-if(alu_operation[0])
-begin
-result= op2 - 1 ;
 end
 
 
