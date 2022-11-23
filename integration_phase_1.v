@@ -23,9 +23,9 @@ wire [pop_width-1:0] data;
 wire [Num_of_bits-1:0] read_data1,read_data2;
 wire [2:0] flag=0;
 wire [15:0] result;
-wire [sp_width-1:0] read_data2_result, mem_address;
+wire [sp_width-1:0] read_data1_result, mem_address;
 wire [pop_width-1:0] value, flag_result;
-wire [pop_width-1:0] read_data1_result; //if pop width = 16 we will not make sign extend
+// wire [pop_width-1:0] read_data1_result; //if pop width = 16 we will not make sign extend
 wire [pc_width-1:0] z_value=32'bz;
 wire selector_2, selector_3, selector_5, selector_6, selector_7;
 wire [1:0] selector_1, selector_4;
@@ -132,9 +132,9 @@ buffer #(91)buffer_alu(.read_data({e_result,e_flag,e_read_add_2,e_read_data1,e_r
                                    d_reg_write,d_int,d_reset,d_alu_op,d_mem_op}),.clk(clk));
 
 //delete
-sign_extend extend_1(e_read_data2,read_data2_result);
+sign_extend extend_1(e_read_data1,read_data1_result);
 
-assign mem_address = read_data2_result;
+assign mem_address = read_data1_result;
 
 //delete
 //mux_generic #(32) mux_2(read_data2_result, sp, selector_2, mem_address);
@@ -146,7 +146,7 @@ assign mem_address = read_data2_result;
 // sign_extend extend_3(e_read_data1,read_data1_result);
 
 // assign value = read_data1_result;
-assign value = e_read_data1;
+assign value = e_read_data2;
 //delete
 //mux_generic_2bit_selector #(pop_width) mux_4(flag_result, pc, read_data1_result, z_value, selector_4, value);
 

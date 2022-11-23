@@ -87,7 +87,13 @@
 //store r1, r2
 0001000101000000
 0000000000000111
+//will be 
+//address r1, value r2
+0001001000100000
 
+
+ldd r1, r2
+r2 = mem[r1]
 
 1-no operation
 2-load r1
