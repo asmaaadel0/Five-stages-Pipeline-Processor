@@ -152,7 +152,11 @@ assign value = e_read_data1;
 
 data_stack_memory #(16,sp_width,11) memory_stage (.clk(clk) ,.write_enable(e_mem_write),.read_enable(e_mem_read),
                                             .write_data(value) ,.address(mem_address),.read_data(data));
-											
+
+
+
+////////////////////////push and pop any register will be written in first address//////////////////////////////
+
 //16 for data,16 for result,16 for immediate,3 for read_add_2(write address), and 19 for control signals
 buffer #(70)buffer_mem(.read_data({m_data,m_result,m_read_add_2,m_reg_write,m_immediate,m_push,m_pop,
                                    m_ldm,m_ldd,m_std,m_jz,m_jn,m_jc,m_jmp,m_call,

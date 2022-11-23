@@ -35,7 +35,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	integration
 
-} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/decode_ciruit.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/decode_ciruit.v}
+} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/decode_ciruit.v} {1 {vlog -work work -stats=none {D:\CUFE24\3rd year\first term\Computer Architecture\Five-stages-Pipeline-Processor\decode_ciruit.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module decode_ciruit
 
@@ -48,13 +48,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	data_stack_memory
-
-} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v}
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module integration_1
-
-Top level modules:
-	integration_1
 
 } {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control_unit.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control_unit.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

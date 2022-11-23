@@ -11,6 +11,7 @@ module alu(
     );
 
 // always @(posedge clk)
+
 //we make it * for writing in negative edge in buffer
 always @(*)
 begin
