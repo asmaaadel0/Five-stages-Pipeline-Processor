@@ -9,6 +9,10 @@ output cs_push,cs_pop,cs_ldm,cs_ldd,cs_std,cs_jz,cs_jn,cs_jc,cs_jmp,
 	   cs_reg_write,cs_int,cs_reset,cs_alu_op,cs_mem_op;
 	   
 reg [CS_NUM-1:0] cs;
+
+
+//if op_code = zeros (buffer after fetch has been reset) then all controls = zero
+
 //1. LDM Rdst, Imm
 //2. STD Rsrc, Rdst
 //3. ADD Rsrc, Rdst
