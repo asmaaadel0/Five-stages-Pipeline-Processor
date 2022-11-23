@@ -4,8 +4,8 @@ localparam Num_of_registers=6 ; //////////must be 20
 localparam pc_width=32;
 localparam sp_width=32;
 localparam op_code_width=5;
-localparam Num_alu=13; //number of alu instructions
-localparam CS_NUM=34; //number of signals with alu instruction
+localparam Num_alu=4; //number of alu instructions
+localparam CS_NUM=25; //number of signals with alu instruction
 localparam pop_width=16; //pop width
 //wire pc=2**5; //how to fill instraction from 0 to 2**5 to start from 2**5
 //reg pc=2**5;
@@ -64,7 +64,7 @@ wire m_reg_write,m_push,m_pop,m_ldm,m_ldd,
     
 
 
-instruction_memory #(Num_of_bits,pc_width,Num_of_registers) inst_mem_stage ( .clk(clk),.cs_ldm(cs_ldm),.pc(pc), .instuction(instuction));//.immediate(immediate)
+instruction_memory #(Num_of_bits,pc_width,Num_of_registers) inst_mem_stage ( .clk(clk),.pc(pc), .instuction(instuction));//.immediate(immediate)
 
 //16 for instruction, 16 for immediate
 // buffer #(32)buffer_fetch(.read_data({instuction_f,immediate_f}), .write_data({instuction,immediate}),.clk(clk));
@@ -98,7 +98,7 @@ decode_ciruit #(16,3) decode_stage (.clk(clk) ,.write_enable(m_reg_write),.write
 							  .read_data1(read_data1), .read_data2(read_data2));
 
 //3 for read_add_2(write address),16 for immediate,16 for read_data1, 16 for read_data2,34 controls
-buffer #(89)buffer_decode(.read_data({d_immediate,d_read_add_2,d_read_data1,d_read_data2,d_shamt,d_alu_controls,d_push,d_pop,
+buffer #(80)buffer_decode(.read_data({d_immediate,d_read_add_2,d_read_data1,d_read_data2,d_shamt,d_alu_controls,d_push,d_pop,
                                    d_ldm,d_ldd,d_std,d_jz,d_jn,d_jc,d_jmp,d_call,
                                    d_ret,d_rti,d_setc,d_clrc,d_mem_read,d_mem_write,
                                    d_reg_write,d_int,d_reset,d_alu_op,d_mem_op}), 

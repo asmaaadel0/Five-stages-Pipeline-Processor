@@ -1,6 +1,6 @@
 module instruction_memory #(parameter Num_of_bits=16, pc_width=32, Num_of_registers= 5)  
            (input clk,
-            input cs_ldm,
+            // input cs_ldm,
             input [pc_width-1:0]pc,
             output reg [Num_of_bits-1:0]instuction//,
 			// output reg [Num_of_bits-1:0]immediate
