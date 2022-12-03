@@ -1,18 +1,113 @@
-# Compile of alu.v was successful.
-# Compile of control_unit.v was successful.
-# Compile of instruction_memory.v was successful.
-# Compile of read_file.v was successful.
-# Compile of data_stack_memory.v was successful.
-# Compile of integration_file.v was successful.
-# Compile of decode_ciruit.v was successful.
-# Compile of mux_generic.v was successful.
-# Compile of sign_extend.v was successful.
-# Compile of integration_phase_1.v was successful.
-# Compile of buffer.v was successful.
-# 11 compiles, 0 failed with no errors.
+# Compile of test.v was successful.
+vsim -gui work.test
+# vsim -gui work.test 
+# Start time: 20:21:31 on Dec 03,2022
+# Loading work.test
+# Loading work.integration_1
+# Loading work.instruction_memory
+# Loading work.read_file
+# Loading work.buffer
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.alu
+# Loading work.sign_extend
+# Loading work.data_stack_memory
+# Loading work.mux_generic
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /test/integrated_module/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+add wave -position end  sim:/test/clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlft293bj1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft293bj1
+add wave -position end  sim:/test/integrated_module/decode_stage/array_reg
+add wave -position end  sim:/test/integrated_module/memory_stage/array_reg
+run
+# 0010100000000000
+# Start
+# 0000100000100000
+# 0000000000000000
+# 0000100001000000
+# 0000000000000010
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001101000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010000000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001000101000000
+add wave -position 10  sim:/test/integrated_module/cs_call
+add wave -position 1  sim:/test/integrated_module/instuction
+add wave -position 1  sim:/test/integrated_module/inst_mem_stage/mem
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /test/integrated_module/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+run
+# 0010100000000000
+# Start
+# 0000100000100000
+# 0000000000000000
+# 0000100001000000
+# 0000000000000010
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001101000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010000000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001000101000000
+add wave -position end  sim:/test/integrated_module/buffer_fetch/read_data
+run
+add wave -position end  sim:/test/integrated_module/inst_mem_stage/instuction
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /test/integrated_module/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+run
+# 0010100000000000
+# Start
+# 0000100000100000
+# 0000000000000000
+# 0000100001000000
+# 0000000000000010
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001101000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010000000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001000101000000
 vsim -gui work.integration_1
+# End time: 20:31:07 on Dec 03,2022, Elapsed time: 0:09:36
+# Errors: 0, Warnings: 2
 # vsim -gui work.integration_1 
-# Start time: 12:17:08 on Dec 03,2022
+# Start time: 20:31:07 on Dec 03,2022
 # Loading work.integration_1
 # Loading work.instruction_memory
 # Loading work.read_file
@@ -28,49 +123,11 @@ vsim -gui work.integration_1
 add wave -position end  sim:/integration_1/clk
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
-#           Attempting to use alternate WLF file "./wlfte319j9".
+#           Attempting to use alternate WLF file "./wlfts2fq5f".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfte319j9
-force -freeze sim:/integration_1/clk 0 0, 1 {50 ps} -r 100
-add wave -position end  sim:/integration_1/result
+#           Using alternate file: ./wlfts2fq5f
 add wave -position end  sim:/integration_1/memory_stage/array_reg
-run
-# 0010100000000000
-# 0000100000100000
-# 0000000000000000
-# 0000100001000000
-# 0000000000000010
-# 0010100000000000
-# 0010100000000000
-# 0010100000000000
-# 0010100000000000
-# 0001101000100000
-# 0010000000100000
-# 0001000101000000
-add wave -position end  sim:/integration_1/decode_stage/array_reg
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
-force -freeze sim:/integration_1/clk 0 0, 1 {50 ps} -r 100
-run
-# 0010100000000000
-# 0000100000100000
-# 0000000000000000
-# 0000100001000000
-# 0000000000000010
-# 0010100000000000
-# 0010100000000000
-# 0010100000000000
-# 0010100000000000
-# 0001101000100000
-# 0010000000100000
-# 0001000101000000
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
-force -freeze sim:/integration_1/clk 0 0, 1 {50 ps} -r 100
+add wave -position 1  sim:/integration_1/decode_stage/array_reg
 run
 # 0010100000000000
 # 0000100000100000
@@ -87,6 +144,10 @@ run
 # 0010100000000000
 # 0010100000000000
 # 0010000000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
 # 0001000101000000
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
@@ -114,5 +175,60 @@ run
 # 0010100000000000
 # 0010100000000000
 # 0001000101000000
-# End time: 13:43:56 on Dec 03,2022, Elapsed time: 1:26:48
+add wave -position 1  sim:/integration_1/decode_stage/array_reg
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+force -freeze sim:/integration_1/clk 0 0, 1 {50 ps} -r 100
+run
+# 0010100000000000
+# 0000100000100000
+# 0000000000000000
+# 0000100001000000
+# 0000000000000010
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001101000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010000000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001000101000000
+# Load canceled
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /integration_1/inst_mem_stage/read File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v Line: 13
+force -freeze sim:/integration_1/clk 0 0, 1 {50 ps} -r 100
+run
+# 0010100000000000
+# 0000100000100000
+# 0000000000000000
+# 0000100001000000
+# 0000000000000010
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001101000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010000000100000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0010100000000000
+# 0001000101000000
+# 0001001000100000
+# End time: 22:51:53 on Dec 03,2022, Elapsed time: 2:20:46
 # Errors: 0, Warnings: 2
