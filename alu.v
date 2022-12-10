@@ -87,7 +87,7 @@ end
 
 
  flag[0]=(result==0)? 1:0;
- flag[1]=(result<0)? 1:0;
+ flag[1]=(result[15]==1)? 1:0;
 
 end
 
