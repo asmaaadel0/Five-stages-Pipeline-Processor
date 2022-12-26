@@ -1,0 +1,64 @@
+#############################
+# Zero Operand Instructions #
+#############################
+
+# ALU OPERATIONS (16 BITS).
+CLRC 00010
+SETC 00001
+
+# MOVE INSTRUCTIONS (16/10 BITS).
+NOP 00000
+MOV 01000
+IN 00111
+OUT 00110
+
+# BRANCH INSTRUCTIONS (16 BITS).
+RET 11101
+RTI 11110
+
+############################
+# One Operand Instructions #
+############################
+
+# ALU OPERATIONS (10 BITS).
+RLC 0111000000
+RRC 0111010000
+NOT 00011
+INC 00100
+DEC 00101
+
+# BRANCH INSTRUCTIONS (10/13 BITS).
+JMP 11011
+JZ 11000 
+JN 11001
+JC 11010
+CALL 11100
+PUSH 10000
+POP 10001
+
+############################
+# Two Operand Instructions #
+############################
+
+# ALU OPERATIONS (10 BITS).
+ADD 01001
+MUL 0110000000
+SUB 01010
+AND 01011
+OR 01100
+
+# MEMORY INSTRUCTIONS (3 BITS).
+LDD 10011
+STD 10100
+
+# MOVE INSTRUCTIONS (10 BITS).
+LDM 10010
+
+
+##############################
+# Three Operand Instructions #
+##############################
+
+# ALU OPERATIONS (6 BITS).
+SHL 01101
+SHR 01110
