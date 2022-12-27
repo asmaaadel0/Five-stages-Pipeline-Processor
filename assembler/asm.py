@@ -94,37 +94,55 @@ class Assembler(object):
                     size = 2
                     destination, immediate_value = words[1].split(",")
                     immediate_value = int(immediate_value)
-                    ir += self.registers[destination] + "000"
+                    ir += "000" + self.registers[destination] + "000"
                     ir += "," + ('0' * (NUMBER_OF_BITS - len(bin(immediate_value)[2:]))) + bin(immediate_value)[2:] 
                     print (words, "LDM TWO OPERAND", size, ir)
 
-                elif words[0] == "ldd" or words[0] == "std":
-                    register, effective_address = words[1].split(",")
-                    effective_address = int(effective_address)
-                    ir += ('0' * (10 - len(bin(effective_address)[2:]))) + bin(effective_address)[2:] + self.registers[
-                        register]
-                    print (words, "LDD STD TWO OPERAND", size, ir)
+                elif words[0] == "ldd":
+                    source, destination = words[1].split(",")
+                    ir +=  self.registers[source] + self.registers[destination]
+                    print (words, "LDD TWO OPERAND", size, ir)
+
+                elif words[0] == "std":
+                    source, destination = words[1].split(",")
+                    ir += self.registers[destination] + self.registers[source]
+                    print (words, "STD TWO OPERAND", size, ir)
+
+                elif words[0] == "shl" or words[0] == 'shr':
+                    size = 1
+                    ir += '000'
+                    source, immediate_value  = words[1].split(",")
+                    immediate_value = int(immediate_value)
+                    # Ignore instructions if the immediate shift value is zero
+                    if immediate_value <= 0:
+                        size = 0
+                    
+                    # Limit immediate value to max 16
+                    immediate_value = min(15, immediate_value)
+                    ir += self.registers[source] + ('0' * (4 - len(bin(immediate_value)[2:]))) + bin(immediate_value)[2:]    
+                    print (words, "SHL SHR THREE OPERAND", size, ir)
+                    
 
                 else:  # Two operand ALU instructions.
                     destination,source = words[1].split(",")
                     ir += self.registers[destination] + self.registers[source]
                     print (words, "ALU TWO / MOV OPERAND", size, ir)
 
-        else:  # Three operand instructions.
-            category = Assembler.THREE_OPERAND_INST
-            size = 1
-            ir += '000'
-            source, immediate_value, destination = words[1].split(",")
-            immediate_value = int(immediate_value)
-            # Ignore instructions if the immediate shift value is zero
-            if immediate_value <= 0:
-                size = 0
+        # else:  # Three operand instructions.
+        #     category = Assembler.THREE_OPERAND_INST
+        #     size = 1
+        #     ir += '000'
+        #     source, immediate_value, destination = words[1].split(",")
+        #     immediate_value = int(immediate_value)
+        #     # Ignore instructions if the immediate shift value is zero
+        #     if immediate_value <= 0:
+        #         size = 0
 
-            # Limit immediate value to max 16
-            immediate_value = min(15, immediate_value - 1)
+        #     # Limit immediate value to max 16
+        #     immediate_value = min(15, immediate_value - 1)
 
-            ir += self.registers[source] + ('0' * (4 - len(bin(immediate_value)[2:]))) + bin(immediate_value)[2:]       
-            print (words, "SHL SHR THREE OPERAND", size, ir)
+        #     ir += self.registers[source] + ('0' * (4 - len(bin(immediate_value)[2:]))) + bin(immediate_value)[2:]       
+        #     print (words, "SHL SHR THREE OPERAND", size, ir)
         return ir, category, size
 
     def __read_code_file(self):
