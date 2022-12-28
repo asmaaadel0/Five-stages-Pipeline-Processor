@@ -1,1 +1,1 @@
-self.registers[destination] 
+1110

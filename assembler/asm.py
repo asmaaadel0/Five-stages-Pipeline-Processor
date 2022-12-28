@@ -11,6 +11,20 @@ class Assembler(object):
     TWO_OPERAND_INST = 2
     THREE_OPERAND_INST = 3
 
+    def hexToBinary(self,hex_num):
+        hex_as_int = int(hex_num, 16)
+        binary_num = bin(hex_as_int)
+        binary_num = binary_num[2:].zfill(16)
+
+        return binary_num
+
+    def hexToBinaryShift(self,hex_num):
+        hex_as_int = int(hex_num, 16)
+        binary_num = bin(hex_as_int)
+        binary_num = binary_num[2:].zfill(4)
+
+        return binary_num        
+
     def __init__(self, path, code_output_path, data_output_path):
         self.path = path
         self.code_output_path = code_output_path
@@ -93,9 +107,9 @@ class Assembler(object):
                 if words[0] == "ldm":  # LDM instruction.
                     size = 2
                     destination, immediate_value = words[1].split(",")
-                    immediate_value = int(immediate_value)
+                    immediate_value = self.hexToBinary(immediate_value)
                     ir += "000" + self.registers[destination] + "000"
-                    ir += "," + ('0' * (NUMBER_OF_BITS - len(bin(immediate_value)[2:]))) + bin(immediate_value)[2:] 
+                    ir += "," + immediate_value 
                     print (words, "LDM TWO OPERAND", size, ir)
 
                 elif words[0] == "ldd":
@@ -112,14 +126,14 @@ class Assembler(object):
                     size = 1
                     ir += '000'
                     source, immediate_value  = words[1].split(",")
-                    immediate_value = int(immediate_value)
+                    immediate_value = self.hexToBinaryShift(immediate_value)
                     # Ignore instructions if the immediate shift value is zero
-                    if immediate_value <= 0:
-                        size = 0
+                    # if immediate_value <= 0000:
+                    #     size = 0
                     
                     # Limit immediate value to max 16
-                    immediate_value = min(15, immediate_value)
-                    ir += self.registers[source] + ('0' * (4 - len(bin(immediate_value)[2:]))) + bin(immediate_value)[2:]    
+                    # immediate_value = min(1110, immediate_value)
+                    ir += self.registers[source] + immediate_value   
                     print (words, "SHL SHR THREE OPERAND", size, ir)
                     
 
