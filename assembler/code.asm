@@ -6,7 +6,7 @@ AND R3,R4
 ADD R1,R4
 OUT R4
 RTI
-.ORG 20 ;#this is the instructions code
+.ORG 32 ;#this is the instructions code
 IN R1                   ;#add 00000005 in R1
 IN R2                   ;#add 00000019 in R2
 IN R3                   ;#FFFFFFFF

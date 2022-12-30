@@ -85,12 +85,12 @@ class Assembler(object):
 
                 elif words[0] == 'in':
                     destination = words[1]
-                    ir += "000" + self.registers[destination] + "000"
+                    ir += "000" + self.registers[destination] + "00000"
                     print(words, "IN", size, ir)
 
                 elif words[0] == 'out':
                     source = words[1]
-                    ir += "000" + self.registers[source]
+                    ir += "000" + self.registers[source] + '00000'
                     print(words, "OUT", size, ir)
 
                 elif len(self.instructions[words[0]]) == 13:  # CALL, PUSH or POP instructions.
@@ -140,7 +140,7 @@ class Assembler(object):
                     
                     # Limit immediate value to max 16
                     # immediate_value = min(1110, immediate_value)
-                    ir += self.registers[source] + immediate_value   
+                    ir += self.registers[source] + immediate_value + '0'  
                     print (words, "SHL SHR THREE OPERAND", size, ir)
                     
 
@@ -240,41 +240,41 @@ class Assembler(object):
 
     def __save_instructions(self):
         with open(self.code_output_path, "w") as f:
-            # f.write("// memory data file (do not edit the following line - required for mem load use)" + '\n')
-            # f.write("// instance=/processor/PROG_MEM/Mem" + '\n')
-            # f.write("// format=mti addressradix=d dataradix=b version=1.0 wordsperline=1" + '\n')
+            f.write("// memory data file (do not edit the following line - required for mem load use)" + '\n')
+            f.write("// instance=/processor/PROG_MEM/Mem" + '\n')
+            f.write("// format=mti addressradix=d dataradix=b version=1.0 wordsperline=1" + '\n')
 
             size = 0
-            while size < 1024:
-                # print(self.binary_code.keys().mapping);
+            while size < pow(2,20):
                 if size in self.binary_code.keys():
                     ir_code = self.binary_code[size]
                     if ir_code != '':
                         for code in ir_code.split(','):
-                            # f.write(" " * (4 - len(str(size))) + str(size) + ": " + str(code) + '\n')
+                            f.write(" " * (4 - len(str(size))) + str(size) + ": " + str(code) + '\n')
                             for i in range(len(code), 16):
                                 code += '0'
-                            f.write(str(code) + '\n')
+                            # f.write(" " * (4 - len(str(size))) + str(size) + ": " + str(code) + '\n')
+                            # f.write(str(code) + '\n')
                             size += 1
                 else:
-                    # f.write(" " * (4 - len(str(size))) + str(size) + ": " + ('0' * NUMBER_OF_BITS) + '\n')
-                    f.write(('0' * NUMBER_OF_BITS) + '\n')
+                    f.write(" " * (4 - len(str(size))) + str(size) + ": " + ('0' * NUMBER_OF_BITS) + '\n')
+                    # f.write(('0' * NUMBER_OF_BITS) + '\n')
                     size += 1
 
     def __save_data(self):
         with open(self.data_output_path, "w") as f:
-            # f.write("// memory data file (do not edit the following line - required for mem load use)" + '\n')
-            # f.write("// instance=/processor/DATA_MEM/Mem" + '\n')
-            # f.write("// format=mti addressradix=d dataradix=b version=1.0 wordsperline=1" + '\n')
+            f.write("// memory data file (do not edit the following line - required for mem load use)" + '\n')
+            f.write("// instance=/processor/DATA_MEM/Mem" + '\n')
+            f.write("// format=mti addressradix=d dataradix=b version=1.0 wordsperline=1" + '\n')
 
             size = 0
             while size < 1024:
                 if size in self.variables.keys():
-                    # f.write(" " * (4 - len(str(size))) + str(size) + ": " + self.variables[size] + '\n')
-                    f.write(self.variables[size] + '\n')
+                    f.write(" " * (4 - len(str(size))) + str(size) + ": " + self.variables[size] + '\n')
+                    # f.write(self.variables[size] + '\n')
                 else:
-                    # f.write(" " * (4 - len(str(size))) + str(size) + ": " + ('0' * NUMBER_OF_BITS) + '\n')
-                    f.write(('0' * NUMBER_OF_BITS) + '\n')
+                    f.write(" " * (4 - len(str(size))) + str(size) + ": " + ('0' * NUMBER_OF_BITS) + '\n')
+                    # f.write(('0' * NUMBER_OF_BITS) + '\n')
                 size += 1
 
     # Read instructions dictionary.
