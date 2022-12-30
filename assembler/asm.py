@@ -140,6 +140,7 @@ class Assembler(object):
                 else:  # Two operand ALU instructions.
                     destination,source = words[1].split(",")
                     ir += self.registers[destination] + self.registers[source]
+                    ir += '00001'
                     print (words, "ALU TWO / MOV OPERAND", size, ir)
 
         # else:  # Three operand instructions.

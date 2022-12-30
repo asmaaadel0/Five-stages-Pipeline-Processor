@@ -3,4 +3,4 @@
 100             ;ISR address
 
 .CODE
-LDM R1,F
+MOV R1,R2
