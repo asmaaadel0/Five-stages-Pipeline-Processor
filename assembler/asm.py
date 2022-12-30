@@ -194,7 +194,7 @@ class Assembler(object):
                     if (len(line_words[1].replace(" ", "")) >= 1):
                         self.current_data_mem_location = max(int(line_words[1]), 0)
                 continue
-            elif line_words[0] == ".code":
+            elif line_words[0] == ".org" and line_words[1] == "0":
                 self.code_seg_start_line = current_line
                 data_seg = False
                 break
@@ -226,7 +226,8 @@ class Assembler(object):
                 break
             elif line_words[0][0] == ".":
                 # A new sub routine, change the start address.
-                self.current_code_mem_location = int(line_words[0][1:])
+                # print(line_words[1])
+                self.current_code_mem_location = int(line_words[1])
                 continue
 
             ir, category, size = self.__get_instruction_info(line)
