@@ -173,9 +173,10 @@ class Assembler(object):
             line = fp.readline()
             isr_address_line = True
             while line:
-                if len(line.strip()) != 0 and line.strip()[0] != ";" and line.strip()[:2] != "//":
+                if len(line.strip()) != 0 and line.strip()[0] != ";" and line.strip()[:2] != "//" and line.strip()[0] != "#":
                     line = line.strip().lower()
                     line = line.split(";", 1)[0]
+                    line = line.split("#", 1)[0]
                     self.file_lines.append(line)
                 line = fp.readline()
 
@@ -245,6 +246,7 @@ class Assembler(object):
 
             size = 0
             while size < 1024:
+                # print(self.binary_code.keys().mapping);
                 if size in self.binary_code.keys():
                     ir_code = self.binary_code[size]
                     if ir_code != '':
