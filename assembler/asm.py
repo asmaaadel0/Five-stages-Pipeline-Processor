@@ -69,6 +69,8 @@ class Assembler(object):
 
         if len(words) == 1:  # No operand instructions.
             category = Assembler.ZERO_OPERAND_INST
+            if words[0] == 'rti' or words[0] == 'ret':
+                ir += '00000000100'
             print (words, "NO OPERAND", size, ir)
 
         elif len(words[1].split(",")) < 3:
@@ -98,7 +100,12 @@ class Assembler(object):
 
                 else:  # One operand ALU instructions
                     register = words[1]
-                    ir += "000" + self.registers[register]
+                    print(words[0])
+                    if words[0] == 'call':
+                        ir += "000" + self.registers[register] + '00100'
+                    else:    
+                        ir += "000" + self.registers[register]
+                    # ir += "000" + self.registers[register]
                     print (words, "ONE ALU OPERAND", size, ir)
 
             else:  # Two operand instructions.
@@ -108,7 +115,7 @@ class Assembler(object):
                     size = 2
                     destination, immediate_value = words[1].split(",")
                     immediate_value = self.hexToBinary(immediate_value)
-                    ir += "000" + self.registers[destination] + "000"
+                    ir += "000" + self.registers[destination] + "00100"
                     ir += "," + immediate_value 
                     print (words, "LDM TWO OPERAND", size, ir)
 
