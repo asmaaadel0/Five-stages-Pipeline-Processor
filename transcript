@@ -321,3 +321,5 @@ restart -f
 # ** Warning: (vsim-3722) D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v(87): [TFMPC] - Missing connection for port 'cs_rti'.
 # ** Warning: (vsim-3722) D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v(87): [TFMPC] - Missing connection for port 'INT_counter'.
 # ** Warning: (vsim-3722) D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v(87): [TFMPC] - Missing connection for port 'write_cs_rti'.
+# End time: 01:07:40 on Dec 31,2022, Elapsed time: 0:17:39
+# Errors: 0, Warnings: 15
