@@ -1,18 +1,3 @@
-# Compile of read_file.v was successful.
-# Compile of alu.v was successful.
-# Compile of control_unit.v was successful.
-# Compile of instruction_memory.v was successful.
-# Compile of read_file.v was successful.
-# Compile of data_stack_memory.v was successful.
-# Compile of integration_file.v was successful.
-# Compile of decode_ciruit.v was successful.
-# Compile of mux_generic.v was successful.
-# Compile of sign_extend.v was successful.
-# Compile of integration_phase_1.v was successful.
-# Compile of buffer.v was successful.
-# Compile of test.v was successful.
-# 12 compiles, 0 failed with no errors.
-# Load canceled
 # Compile of alu.v was successful.
 # Compile of control_unit.v was successful.
 # Compile of instruction_memory.v was successful.
@@ -41,7 +26,7 @@
 # 25 compiles, 0 failed with no errors.
 vsim -gui work.integration_3
 # vsim -gui work.integration_3 
-# Start time: 11:12:28 on Dec 31,2022
+# Start time: 12:46:11 on Dec 31,2022
 # Loading work.integration_3
 # Loading work.count_NOP
 # Loading work.PC
@@ -71,35 +56,179 @@ vsim -gui work.integration_3
 #    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'out'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(6).
 #    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
-mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/assembler/CODE_RAM.mem} /integration_3/memory_stage/array_reg
 add wave -position end  sim:/integration_3/instruction
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
-#           Attempting to use alternate WLF file "./wlftd7v1yh".
+#           Attempting to use alternate WLF file "./wlfts9r5ar".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftd7v1yh
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i0'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i1'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'out'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
-mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
+#           Using alternate file: ./wlfts9r5ar
 add wave -position end  /integration_3/inst_mem_stage/mem
-run
 mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
-mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+source run3.do
+# End time: 12:47:54 on Dec 31,2022, Elapsed time: 0:01:43
+# Errors: 0, Warnings: 7
+# vsim -gui work.integration_3 
+# Start time: 12:47:54 on Dec 31,2022
+# Loading work.integration_3
+# Loading work.count_NOP
+# Loading work.PC
+# Loading work.mux_generic_2bit_selector
+# Loading work.mux_generic
+# Loading work.sign_extend
+# Loading work.POPed_PC
+# Loading work.instruction_memory
+# Loading work.load_use_detection
+# Loading work.IN_Port
+# Loading work.fetch_buffer
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.buffer
+# Loading work.forwarding_unit
+# Loading work.alu
+# Loading work.flag_reg
+# Loading work.sign_extend_16
+# Loading work.Last_instr
+# Loading work.Previous_SP_change_reg
+# Loading work.SP
+# Loading work.data_stack_memory
+# Loading work.OUT_Port
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i0'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
 #    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i1'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
 #    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'out'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(6).
 #    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlft07wskr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft07wskr
+mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
+add wave -position 0  /integration_3/inst_mem_stage/mem
+run
+# WARNING: No extended dataflow license exists
+source run3.do
+# End time: 12:51:24 on Dec 31,2022, Elapsed time: 0:03:30
+# Errors: 0, Warnings: 6
+# vsim -gui work.integration_3 
+# Start time: 12:51:25 on Dec 31,2022
+# Loading work.integration_3
+# Loading work.count_NOP
+# Loading work.PC
+# Loading work.mux_generic_2bit_selector
+# Loading work.mux_generic
+# Loading work.sign_extend
+# Loading work.POPed_PC
+# Loading work.instruction_memory
+# Loading work.load_use_detection
+# Loading work.IN_Port
+# Loading work.fetch_buffer
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.buffer
+# Loading work.forwarding_unit
+# Loading work.alu
+# Loading work.flag_reg
+# Loading work.sign_extend_16
+# Loading work.Last_instr
+# Loading work.Previous_SP_change_reg
+# Loading work.SP
+# Loading work.data_stack_memory
+# Loading work.OUT_Port
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i0'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i1'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'out'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlft43f8jc".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft43f8jc
 mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
 run
+source run3.do
+# End time: 12:54:48 on Dec 31,2022, Elapsed time: 0:03:23
+# Errors: 0, Warnings: 6
+# vsim -gui work.integration_3 
+# Start time: 12:54:48 on Dec 31,2022
+# Loading work.integration_3
+# Loading work.count_NOP
+# Loading work.PC
+# Loading work.mux_generic_2bit_selector
+# Loading work.mux_generic
+# Loading work.sign_extend
+# Loading work.POPed_PC
+# Loading work.instruction_memory
+# Loading work.load_use_detection
+# Loading work.IN_Port
+# Loading work.fetch_buffer
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.buffer
+# Loading work.forwarding_unit
+# Loading work.alu
+# Loading work.flag_reg
+# Loading work.sign_extend_16
+# Loading work.Last_instr
+# Loading work.Previous_SP_change_reg
+# Loading work.SP
+# Loading work.data_stack_memory
+# Loading work.OUT_Port
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i0'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i1'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'out'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlftd207gi".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftd207gi
+mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
 run
+source run3.do
+# End time: 12:57:21 on Dec 31,2022, Elapsed time: 0:02:33
+# Errors: 0, Warnings: 6
+# vsim -gui work.integration_3 
+# Start time: 12:57:21 on Dec 31,2022
+# Loading work.integration_3
+# Loading work.count_NOP
+# Loading work.PC
+# Loading work.mux_generic_2bit_selector
+# Loading work.mux_generic
+# Loading work.sign_extend
+# Loading work.POPed_PC
+# Loading work.instruction_memory
+# Loading work.load_use_detection
+# Loading work.IN_Port
+# Loading work.fetch_buffer
+# Loading work.control_unit
+# Loading work.decode_ciruit
+# Loading work.buffer
+# Loading work.forwarding_unit
+# Loading work.alu
+# Loading work.flag_reg
+# Loading work.sign_extend_16
+# Loading work.Last_instr
+# Loading work.Previous_SP_change_reg
+# Loading work.SP
+# Loading work.data_stack_memory
+# Loading work.OUT_Port
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i0'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i1'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'out'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
+#           Attempting to use alternate WLF file "./wlft68n2wc".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft68n2wc
+mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
 run
+# End time: 12:59:25 on Dec 31,2022, Elapsed time: 0:02:04
+# Errors: 0, Warnings: 6

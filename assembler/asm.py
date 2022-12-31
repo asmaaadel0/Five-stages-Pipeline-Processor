@@ -71,6 +71,8 @@ class Assembler(object):
             category = Assembler.ZERO_OPERAND_INST
             if words[0] == 'rti' or words[0] == 'ret':
                 ir += '00000000100'
+            else:
+                ir += '00000000000'        
             print (words, "NO OPERAND", size, ir)
 
         elif len(words[1].split(",")) < 3:
@@ -80,7 +82,7 @@ class Assembler(object):
 
                 if words[0][0] == "j":  # Branch instructions
                     src = words[1]
-                    ir += "000" + self.registers[src]
+                    ir += "000" + self.registers[src] + '00000'
                     print (words, "BRANCH", size, ir)
 
                 elif words[0] == 'in':
@@ -104,7 +106,7 @@ class Assembler(object):
                     if words[0] == 'call':
                         ir += "000" + self.registers[register] + '00100'
                     else:    
-                        ir += "000" + self.registers[register]
+                        ir += "000" + self.registers[register] + '00000'
                     # ir += "000" + self.registers[register]
                     print (words, "ONE ALU OPERAND", size, ir)
 
@@ -121,12 +123,12 @@ class Assembler(object):
 
                 elif words[0] == "ldd":
                     source, destination = words[1].split(",")
-                    ir +=  self.registers[source] + self.registers[destination]
+                    ir +=  self.registers[source] + self.registers[destination] + '00000'
                     print (words, "LDD TWO OPERAND", size, ir)
 
                 elif words[0] == "std":
                     source, destination = words[1].split(",")
-                    ir += self.registers[destination] + self.registers[source]
+                    ir += self.registers[destination] + self.registers[source] + '00000'
                     print (words, "STD TWO OPERAND", size, ir)
 
                 elif words[0] == "shl" or words[0] == 'shr':
@@ -268,7 +270,7 @@ class Assembler(object):
             f.write("// format=mti addressradix=d dataradix=b version=1.0 wordsperline=1" + '\n')
 
             size = 0
-            while size < 1024:
+            while size < pow(2,20):
                 if size in self.variables.keys():
                     f.write(" " * (4 - len(str(size))) + str(size) + ": " + self.variables[size] + '\n')
                     # f.write(self.variables[size] + '\n')
