@@ -2,6 +2,7 @@
 module decode_ciruit #(parameter data_width=16,address_width=3)
 
 (input wire clk 
+,input wire reset
 ,input wire write_enable
 ,input wire [(data_width-1):0] write_data 
 ,input wire [(address_width-1):0] write_address
@@ -16,10 +17,14 @@ always @(posedge clk )
 // always @(*)
  begin
 
-if(write_enable)
-    array_reg[write_address] =write_data ;
+	if(reset)
+	begin
+		for(i=0; i<2**address_width; i=i+1) array_reg[i] = 0;
+	end
+	else if(write_enable)
+		array_reg[write_address] =write_data ;
 
- end
+	 end
 
 // always @(negedge clk )
 always @(*)

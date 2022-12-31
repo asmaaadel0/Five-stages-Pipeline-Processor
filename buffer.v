@@ -1,3 +1,4 @@
+
 //assume read at posedge and write at negative edge
 module buffer #(parameter Width=16)(read_data, write_data,clk);//,rst);
 
