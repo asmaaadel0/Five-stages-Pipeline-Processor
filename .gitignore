@@ -5,3 +5,4 @@ pipeline-processor.cr.mti
 wlf*
 transcript
 vsim.wlf
+pipeline-processor.mpf
