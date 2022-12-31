@@ -6,16 +6,16 @@ module instruction_memory #(parameter Num_of_bits=16, pc_width=32, Num_of_regist
 			// output reg [Num_of_bits-1:0]immediate
 			);
 
-    wire [Num_of_bits-1:0]mem[2**Num_of_registers-1:0];
+    reg [Num_of_bits-1:0]inst_mem[2**Num_of_registers-1:0];
 	
-	read_file #(Num_of_bits, Num_of_registers) read (mem);
+	// read_file #(Num_of_bits, Num_of_registers) read (inst_mem);
 
     integer i;
 
     always @(posedge clk)
 	//always @(*)
     begin
-        instuction = mem[pc];		
+        instuction = inst_mem[pc];		
 		// immediate  = mem[pc+1];	
         // pc <= pc +1;		
     end
