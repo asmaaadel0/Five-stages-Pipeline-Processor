@@ -82,7 +82,10 @@ class Assembler(object):
 
                 if words[0][0] == "j":  # Branch instructions
                     src = words[1]
-                    ir += "000" + self.registers[src] + '00000'
+                    if words[0] == 'jmp':
+                        ir += "000" + self.registers[src] + '00000'
+                    else:
+                        ir += "000" + self.registers[src] + '01000'
                     print (words, "BRANCH", size, ir)
 
                 elif words[0] == 'in':
@@ -104,7 +107,7 @@ class Assembler(object):
                     register = words[1]
                     print(words[0])
                     if words[0] == 'call':
-                        ir += "000" + self.registers[register] + '00100'
+                        ir += "000" + self.registers[register] + '01100'
                     else:    
                         ir += "000" + self.registers[register] + '00000'
                     # ir += "000" + self.registers[register]
