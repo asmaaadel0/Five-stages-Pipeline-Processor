@@ -1,7 +1,10 @@
-# Load canceled
+python -u "d:\CUFE24\3rd year\first term\Computer Architecture\Five-stages-Pipeline-Processor\assembler\asm.py"
+# C:\Users\Asmaa Adel\AppData\Local\Programs\Python\Python310\python.EXE: can't open file 'D:\\CUFE24\\3rd year\\first term\\Computer Architecture\\Five-stages-Pipeline-Processor\\CUFE24\x03rd year\x0cirst termComputer ArchitectureFive-stages-Pipeline-Processor\x07ssembler\x07sm.py': [Errno 22] Invalid argument
+source run3.do
+# C:\Users\Asmaa Adel\AppData\Local\Programs\Python\Python310\python.EXE: can't open file 'D:\\CUFE24\\3rd year\\first term\\Computer Architecture\\Five-stages-Pipeline-Processor\\CUFE24\x03rd year\x0cirst termComputer ArchitectureFive-stages-Pipeline-Processor\x07ssembler\x07sm.py': [Errno 22] Invalid argument
 source run3.do
 # vsim -gui work.integration_3 
-# Start time: 13:21:36 on Dec 31,2022
+# Start time: 13:57:11 on Dec 31,2022
 # Loading work.integration_3
 # Loading work.count_NOP
 # Loading work.PC
@@ -33,52 +36,8 @@ source run3.do
 #    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
-#           Attempting to use alternate WLF file "./wlftvhiy18".
+#           Attempting to use alternate WLF file "./wlftcmnsec".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftvhiy18
-mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
-run
-run
-exec run.bsh
-# couldn't execute "run.bsh": no such file or directory
-exec "./run.bsh"
-# couldn't execute ".\run.bsh": no such file or directory
-source run3.do
-# End time: 13:28:13 on Dec 31,2022, Elapsed time: 0:06:37
-# Errors: 0, Warnings: 6
-# vsim -gui work.integration_3 
-# Start time: 13:28:13 on Dec 31,2022
-# Loading work.integration_3
-# Loading work.count_NOP
-# Loading work.PC
-# Loading work.mux_generic_2bit_selector
-# Loading work.mux_generic
-# Loading work.sign_extend
-# Loading work.POPed_PC
-# Loading work.instruction_memory
-# Loading work.load_use_detection
-# Loading work.IN_Port
-# Loading work.fetch_buffer
-# Loading work.control_unit
-# Loading work.decode_ciruit
-# Loading work.buffer
-# Loading work.forwarding_unit
-# Loading work.alu
-# Loading work.flag_reg
-# Loading work.sign_extend_16
-# Loading work.Last_instr
-# Loading work.Previous_SP_change_reg
-# Loading work.SP
-# Loading work.data_stack_memory
-# Loading work.OUT_Port
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i0'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'i1'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (2) for port 'out'. The port definition is at: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /integration_3/mux_pc_selector File: D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v Line: 231
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Asmaa Adel  Hostname: ASMAA-ADEL  ProcessID: 12536
-#           Attempting to use alternate WLF file "./wlftbz1myc".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftbz1myc
+#           Using alternate file: ./wlftcmnsec
+# End time: 13:57:42 on Dec 31,2022, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 7
