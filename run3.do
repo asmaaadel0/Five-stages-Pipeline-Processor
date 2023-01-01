@@ -1,11 +1,37 @@
 #project compileall
 
 vsim -gui work.integration_3
+########################################
+#test
 
 add wave -position 0  sim:/integration_3/decode_stage/array_reg
 
-########################################
-#test
+add wave -position insertpoint  \
+sim:/integration_3/decode_stage/data_width \
+sim:/integration_3/decode_stage/address_width \
+sim:/integration_3/decode_stage/clk \
+sim:/integration_3/decode_stage/reset \
+sim:/integration_3/decode_stage/write_enable \
+sim:/integration_3/decode_stage/write_data \
+sim:/integration_3/decode_stage/write_address \
+sim:/integration_3/decode_stage/read_address1 \
+sim:/integration_3/decode_stage/read_address2 \
+sim:/integration_3/decode_stage/read_data1 \
+sim:/integration_3/decode_stage/read_data2 \
+sim:/integration_3/decode_stage/array_reg \
+sim:/integration_3/decode_stage/i
+
+add wave -position insertpoint  \
+sim:/integration_3/LD_sue_case/Previus_inst_load \
+sim:/integration_3/LD_sue_case/not_dumy_zeros \
+sim:/integration_3/LD_sue_case/Previus_Previus_inst_load \
+sim:/integration_3/LD_sue_case/Previus_reg_write \
+sim:/integration_3/LD_sue_case/call_or_branch \
+sim:/integration_3/LD_sue_case/current_add_1 \
+sim:/integration_3/LD_sue_case/current_add_2 \
+sim:/integration_3/LD_sue_case/Previus_dst_add \
+sim:/integration_3/LD_sue_case/Previus_Previus_dst_add \
+sim:/integration_3/LD_sue_case/fetch_nop_LD
 #############################################
 
 add wave -position insertpoint  \
@@ -220,6 +246,7 @@ sim:/integration_3/m_cs_jmp
 
 force -freeze sim:/integration_3/clk 1 0, 0 {50 ps} -r 100
 mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
+
 #------------  resets  ---------------#
 #NOTE: cancel Reset_2Power5 after 400 as the instuction at 32-1 is ready just before 400
 force -freeze sim:/integration_3/Reset_2Power5 1 0 -cancel 100

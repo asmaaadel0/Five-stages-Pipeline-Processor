@@ -14,8 +14,6 @@ sim:/integration_3/LD_sue_case/current_add_2 \
 sim:/integration_3/LD_sue_case/Previus_dst_add \
 sim:/integration_3/LD_sue_case/Previus_Previus_dst_add \
 sim:/integration_3/LD_sue_case/fetch_nop_LD
-
-
 #############################################
 
 add wave -position insertpoint  \

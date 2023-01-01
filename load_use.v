@@ -1,3 +1,4 @@
+
 // module load_use_detection (Previus_inst_load,Previus_Previus_inst_load,current_add_1 ,current_add_2 ,Previus_dst_add,Previus_Previus_dst_add ,not_dumy_zeros,Previus_reg_write,call_or_branch,fetch_nop_LD);//,sel_1);//all branch but not jump
 // input Previus_inst_load,not_dumy_zeros;
 // input Previus_Previus_inst_load,Previus_reg_write,call_or_branch;
