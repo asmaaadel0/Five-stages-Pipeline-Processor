@@ -126,12 +126,12 @@ class Assembler(object):
 
                 elif words[0] == "ldd":
                     source, destination = words[1].split(",")
-                    ir +=  self.registers[source] + self.registers[destination] + '00000'
+                    ir +=  self.registers[source] + self.registers[destination] + '00001'
                     print (words, "LDD TWO OPERAND", size, ir)
 
                 elif words[0] == "std":
                     source, destination = words[1].split(",")
-                    ir += self.registers[destination] + self.registers[source] + '00000'
+                    ir += self.registers[destination] + self.registers[source] + '00001'
                     print (words, "STD TWO OPERAND", size, ir)
 
                 elif words[0] == "shl" or words[0] == 'shr':
@@ -144,8 +144,8 @@ class Assembler(object):
                     
                     # Limit immediate value to max 16
                     # immediate_value = min(1110, immediate_value)
-                    ir += self.registers[source] + immediate_value + '0000'  
-                    print (words, "SHL SHR THREE OPERAND", size, ir)
+                    ir += self.registers[source] + immediate_value + '0001'  
+                    print (words, "SHL SHR Twe OPERAND", size, ir)
                     
 
                 else:  # Two operand ALU instructions.
