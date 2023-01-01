@@ -234,5 +234,5 @@ force -deposit sim:/integration_3/PC_select 00 0
 #force -freeze sim:/integration_3/in_port_value 1111111111000 2250 -cancel 2350
 force -freeze sim:/integration_3/in_port_value 1111111111000 2350 -cancel 2450
 
-mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
+mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
 run
