@@ -1,7 +1,7 @@
 #project compileall
 
 vsim -gui work.integration_3
-
+add wave -position 0  sim:/integration_3/decode_stage/array_reg
 add wave -position insertpoint  \
 sim:/integration_3/Num_of_bits \
 sim:/integration_3/Num_of_registers \
