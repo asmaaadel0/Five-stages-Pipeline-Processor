@@ -233,7 +233,7 @@ class Assembler(object):
             elif line_words[0][0] == ".":
                 # A new sub routine, change the start address.
                 # print(line_words[1])
-                self.current_code_mem_location = int(line_words[1])
+                self.current_code_mem_location = int(line_words[1], 16)
                 continue
 
             ir, category, size = self.__get_instruction_info(line)
