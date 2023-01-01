@@ -183,14 +183,16 @@ begin
 	begin
 		alu_controls=4'b1100;
 		 cs_alu_op=1'b1;
-		 cs_reg_write =1'b1;	
+		 cs_reg_write =1'b1;
+		shamt=1'b1;	 
 	end
 	//SHR
 	else if(op_code == 5'b0_1110)
 	begin
 		alu_controls=4'b1101;
 		 cs_alu_op=1'b1;
-		 cs_reg_write =1'b1;	
+		 cs_reg_write =1'b1;
+		shamt =1'b1;
 	end
 	//PUSH
 	else if(op_code == 5'b1_0000)

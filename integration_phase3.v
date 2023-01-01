@@ -132,6 +132,7 @@ wire [3:0] d_alu_controls;
 wire [31:0]d_pc_add1;
 wire d_cs_reg_write,d_cs_push,d_SP_change,d_store_load,
 	d_cs_mem_read,d_cs_mem_write,d_cs_ldm,d_special_int,d_cs_in,d_reset_pc,d_push_flags,d_Pc_high_pop,d_cs_pop;//,d_CALL_branch
+wire d_cs_shamt;
 wire[1:0] d_chosen_value,d_jump_type,d_PC_select;								   
 wire d_start_count_nop,d_cs_alu_op,d_cs_rti,d_write_cs_rti;
 wire d_cs_out;
@@ -181,6 +182,7 @@ wire [15:0] modified_d_read_data2;
 wire [15:0] chosen_Rdst_1;
 wire decode_read_data_1,decode_read_data_2;
 wire [15:0] read_data1_final,read_data2_final;
+wire [2:0]d_read_add_2_final;
 //---------------------------- Laod use case --------------------------------//
 wire fetch_nop_LD;
 wire cs_ldd,d_cs_ldd;
@@ -283,22 +285,22 @@ decode_ciruit #(16,3) decode_stage (.clk(clk),.reset(reset_decode_regs) ,.write_
                               .read_address2(read_add_2), //7:5
 							  .read_data1(read_data1), .read_data2(read_data2));
 
-//103 +21+cs_pop+d_puch_pc_h_int+2 :of d_PC_select+d_start_count_nop+cs_alu_op+cs_rti+d_write_cs_rti+3 of d_read_add_1 +cs_out +d_cs_call + d_cs_ldd +fetch_nop_LD+sel_1_LD_case -sel_1_LD_case -d_fetch_nop_LD
-buffer #(139)buffer_decode(.read_data({d_immediate,d_pc_add1,d_shamt,d_read_add_2,d_read_add_1,d_read_data2,d_read_data1,d_in_port_value,
+//103 +21+cs_pop+d_puch_pc_h_int+2 :of d_PC_select+d_start_count_nop+cs_alu_op+cs_rti+d_write_cs_rti+3 of d_read_add_1 +cs_out +d_cs_call + d_cs_ldd +fetch_nop_LD+sel_1_LD_case -sel_1_LD_case -d_fetch_nop_LD+d_cs_shamt
+buffer #(140)buffer_decode(.read_data({d_immediate,d_pc_add1,d_shamt,d_read_add_2,d_read_add_1,d_read_data2,d_read_data1,d_in_port_value,
 									d_cs_reg_write,d_alu_controls,d_cs_push,d_SP_change,d_chosen_value,d_store_load,
 								   d_cs_mem_read,d_cs_mem_write,d_cs_ldm,d_jump_type,d_special_int,d_cs_jmp,//d_CALL_branch,
-								   d_cs_in,d_reset_pc,d_push_flags,d_Pc_high_pop,d_cs_pop,d_puch_pc_h_int,d_PC_select,d_start_count_nop,d_cs_alu_op,d_cs_rti,d_write_cs_rti,d_cs_out,d_cs_call,d_cs_ldd//,d_fetch_nop_LD//,d_sel_1_LD_case
+								   d_cs_in,d_reset_pc,d_push_flags,d_Pc_high_pop,d_cs_pop,d_puch_pc_h_int,d_PC_select,d_start_count_nop,d_cs_alu_op,d_cs_rti,d_write_cs_rti,d_cs_out,d_cs_call,d_cs_ldd,d_cs_shamt//,d_fetch_nop_LD//,d_sel_1_LD_case
 								   }), 
-                                   .write_data({instruction,pc_add1_f,instruction_f[4:1],read_add_2,read_add_1,read_data2_final,read_data1_final,input_port_f,//in_port_value,
+                                   .write_data({instruction,pc_add1_f,instruction_f[7:4],read_add_2,read_add_1,read_data2_final,read_data1_final,input_port_f,//in_port_value,
                                    cs_reg_write,alu_controls,cs_push,SP_change,chosen_value,store_load,
 								   cs_mem_read,cs_mem_write,cs_ldm,jump_type,special_int,cs_jmp,//CALL_branch
-								   cs_in,reset_pc,push_flags,Pc_high_pop,cs_pop,instruction_f[1],PC_select,start_count_nop,cs_alu_op,cs_rti,write_cs_rti,cs_out,cs_call,cs_ldd//,fetch_nop_LD//,sel_1_LD_case
+								   cs_in,reset_pc,push_flags,Pc_high_pop,cs_pop,instruction_f[1],PC_select,start_count_nop,cs_alu_op,cs_rti,write_cs_rti,cs_out,cs_call,cs_ldd,cs_shamt//,fetch_nop_LD//,sel_1_LD_case
 								   }),.clk(clk),.reset(stage_buffer_reset));
 
 //-----------------------------------------   Data Hazards  -------------------------------------//
 forwarding_unit FU
 		(.current_cs_cin(d_cs_in),.current_cs_ldm(d_cs_ldm),
-		.current_add_1(d_read_add_1) ,.current_add_2 (d_read_add_2),
+		.current_add_1(d_read_add_1) ,.current_add_2 (d_read_add_2_final),// (d_read_add_2),
 		.E_dst_add(e_read_add_2),.M_dst_add(m_read_add_2),
 		.E_WB(e_cs_reg_write),.M_WB(m_cs_reg_write),
 		.sel_1(sel_1),.sel_2(sel_2) );
@@ -315,6 +317,7 @@ flag_reg flag_reg_inst(.read_data(flag),
 		.reset(reset_flag));
 assign final_flag = (e_write_cs_rti)? data[2:0] : alu_flag;
 assign modified_d_read_data2 = op2 ;
+mux_generic #(16) mux_read_add2(d_read_add_2, d_read_add_1, d_cs_shamt, d_read_add_2_final);
 
 //16 for instruction, 16 for immediate 
 //118+15+cs_pop+puch_pc_h_int +2 of d_PC_select+e_start_count_nop + d_write_cs_rti + d_cs_out +d_cs_call -16 of e_in_port_value +e_cs_ldd-16 of e_read_data1 -16 of e_immediate
@@ -324,7 +327,7 @@ buffer #(94)buffer_alu(.read_data({e_read_add_2,e_pc_add1,e_read_data2,e_flag,e_
 								   e_cs_in,e_reset_pc,e_push_flags,
 								   e_Pc_high_pop,e_cs_pop,e_puch_pc_h_int ,e_PC_select,e_start_count_nop,e_write_cs_rti,e_cs_out,e_cs_call,e_cs_ldd//e_cs_rti//e_cs_alu_op
 								   }), 
-								    .write_data({d_read_add_2,d_pc_add1,modified_d_read_data2,alu_flag,result,//d_in_port_value ,
+								    .write_data({d_read_add_2_final,d_pc_add1,modified_d_read_data2,alu_flag,result,//d_in_port_value ,
                                    d_cs_reg_write,d_cs_push,d_SP_change,d_chosen_value,d_store_load,
 								   d_cs_mem_read,d_cs_mem_write,d_cs_ldm,d_special_int,d_cs_jmp,//d_CALL_branch,
 								   d_cs_in,d_reset_pc,d_push_flags,

@@ -1,7 +1,13 @@
 #project compileall
 
 vsim -gui work.integration_3
+
 add wave -position 0  sim:/integration_3/decode_stage/array_reg
+
+########################################
+#test
+#############################################
+
 add wave -position insertpoint  \
 sim:/integration_3/Num_of_bits \
 sim:/integration_3/Num_of_registers \
@@ -112,6 +118,7 @@ sim:/integration_3/d_reset_pc \
 sim:/integration_3/d_push_flags \
 sim:/integration_3/d_Pc_high_pop \
 sim:/integration_3/d_cs_pop \
+sim:/integration_3/d_cs_shamt \
 sim:/integration_3/d_chosen_value \
 sim:/integration_3/d_jump_type \
 sim:/integration_3/d_PC_select \
@@ -194,6 +201,7 @@ sim:/integration_3/decode_read_data_1 \
 sim:/integration_3/decode_read_data_2 \
 sim:/integration_3/read_data1_final \
 sim:/integration_3/read_data2_final \
+sim:/integration_3/d_read_add_2_final \
 sim:/integration_3/fetch_nop_LD \
 sim:/integration_3/cs_ldd \
 sim:/integration_3/d_cs_ldd \
@@ -211,37 +219,110 @@ sim:/integration_3/e_cs_jmp \
 sim:/integration_3/m_cs_jmp
 
 force -freeze sim:/integration_3/clk 1 0, 0 {50 ps} -r 100
-#force -freeze sim:/integration_3/reset_pc 1 0 -cancel 200 
-#force -deposit sim:/integration_3/d_reset_pc 1 0 -cancel 200 
-#force -freeze sim:/integration_3/Reset_2Power5 1 0 -cancel 200
+mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
+#------------  resets  ---------------#
 #NOTE: cancel Reset_2Power5 after 400 as the instuction at 32-1 is ready just before 400
-force -freeze sim:/integration_3/Reset_2Power5 1 0 -cancel 400
-force -freeze sim:/integration_3/reset_data_stack 1 0 -cancel 200
+force -freeze sim:/integration_3/Reset_2Power5 1 0 -cancel 100
+force -freeze sim:/integration_3/reset_data_stack 1 0 -cancel 100
+force -freeze sim:/integration_3/stage_buffer_reset 1 0 -cancel 100
+force -freeze sim:/integration_3/fetch_buffer_reset 1 0 -cancel 100
+force -freeze sim:/integration_3/reset_Last_instr_buffer 1 0 -cancel 100
+force -freeze sim:/integration_3/reset_pc_poped 1 0 -cancel 100
+force -freeze sim:/integration_3/reset_decode_regs 1 0 -cancel 100
+force -freeze sim:/integration_3/reset_sp 1 0 -cancel 100
+force -freeze sim:/integration_3/reset_count_nop 1 200 -cancel 100
+force -freeze sim:/integration_3/reset_flag 1 0 -cancel 100
 
-force -freeze sim:/integration_3/stage_buffer_reset 1 0 -cancel 200
-force -freeze sim:/integration_3/fetch_buffer_reset 1 0 -cancel 200
-force -freeze sim:/integration_3/reset_Last_instr_buffer 1 0 -cancel 200
-force -freeze sim:/integration_3/reset_pc_poped 1 0 -cancel 200
-
-force -freeze sim:/integration_3/reset_decode_regs 1 0 -cancel 200
-force -freeze sim:/integration_3/reset_sp 1 0 -cancel 400
-force -freeze sim:/integration_3/reset_count_nop 1 200 -cancel 300
-#force -deposit sim:/integration_3/fetch_nop_counter 0 0
+#----------  initial values  -------------#
 force -deposit sim:/integration_3/m_start_count_nop 0 0 
-#force -deposit sim:/integration_3/start_count_nop 0 0 
-force -freeze sim:/integration_3/reset_flag 1 0 -cancel 200
 force -deposit sim:/integration_3/jump_result 0 0
-#force -freeze sim:/integration_3/INT_signal 1 1600 -cancel 1700
-#force -freeze sim:/integration_3/INT_signal 1 1660 -cancel 1700
+
+#---------------------  int  -----------------#
 #final:force -freeze sim:/integration_3/INT_signal 1 1660 -cancel 1690
-force -deposit sim:/integration_3/no_change 00 0 -cancel 300 
+force -deposit sim:/integration_3/no_change 00 0 
 force -deposit sim:/integration_3/PC_select 00 0
 force -deposit sim:/integration_3/sel_1_LD_case 0 0
-###############    forcing input port values      ###############
-#force -freeze sim:/integration_3/in_port_value 1111111111000 2400 -cancel 2500
-#force -freeze sim:/integration_3/in_port_value 1111111111000 2300 -cancel 2400
-#force -freeze sim:/integration_3/in_port_value 1111111111000 2250 -cancel 2350
-force -freeze sim:/integration_3/in_port_value 1111111111000 2350 -cancel 2450
 
-mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
+#0
+run 
+
+#---------------------  forcing input port values  --------------------#
+#50
+force -freeze sim:/integration_3/in_port_value 0101 0
+run
+run
+
+#150
+force -freeze sim:/integration_3/in_port_value 00011001 0
+run
+run
+
+#250
+force -freeze sim:/integration_3/in_port_value 1111111111111111 0
+run
+run
+
+#350
+force -freeze sim:/integration_3/in_port_value 1111001100100000 0 
+run
+run
+
+#------------------------  normal simulation -------------#
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
 run

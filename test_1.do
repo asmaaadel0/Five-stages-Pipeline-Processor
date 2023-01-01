@@ -237,10 +237,10 @@ force -deposit sim:/integration_3/no_change 00 0 -cancel 300
 force -deposit sim:/integration_3/PC_select 00 0
 force -deposit sim:/integration_3/sel_1_LD_case 0 0
 ###############    forcing input port values      ###############
-force -drive sim:/integration_3/in_port_value 0101 350 -cancel 450
-force -drive sim:/integration_3/in_port_value 00011001 450 -cancel 550
-force -drive sim:/integration_3/in_port_value 1111111111111111 550 -cancel 650
-force -drive sim:/integration_3/in_port_value 1111001100100000 650 -cancel 750
+force -freeze sim:/integration_3/in_port_value 0101 350 -cancel 450
+force -freeze sim:/integration_3/in_port_value 00011001 450 -cancel 550
+force -freeze sim:/integration_3/in_port_value 1111111111111111 550 -cancel 650
+force -freeze sim:/integration_3/in_port_value 1111001100100000 650 -cancel 750
 
 mem load -i {C:/Users/samaa/Desktop/CMP_third_year/arch/project/claen_project/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
 

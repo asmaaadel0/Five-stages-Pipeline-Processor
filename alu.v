@@ -66,7 +66,8 @@ end
 //------------------------------------- SUB ---------------------------------------//
 else if(alu_operation==4'b1001)
 begin
-result= op2 - op1;
+// result= op2 - op1;
+result= op1 - op2 ;
 
  flag[0]=(result==0)? 1:0;
  flag[1]=(result[15]==1)? 1:0;
@@ -90,8 +91,8 @@ end
 //------------------------------------- SHL ---------------------------------------//
 else if(alu_operation==4'b1100)
 begin
- result= op2 << shamt ;
-flag[2]=op2[15-(shamt-1)];
+ result= op1 << shamt ;
+flag[2]=op1[15-(shamt-1)];
 
  flag[0]=(result==0)? 1:0;
  flag[1]=(result[15]==1)? 1:0;
@@ -99,8 +100,8 @@ end
 //------------------------------------- SHR ---------------------------------------//
 else if(alu_operation==4'b1101)
 begin
- result= op2 >> shamt ;
-flag[2]=op2[(shamt-1)];
+ result= op1 >> shamt ;
+flag[2]=op1[(shamt-1)];
 
  flag[0]=(result==0)? 1:0;
  flag[1]=(result[15]==1)? 1:0;
