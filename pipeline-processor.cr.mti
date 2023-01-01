@@ -54,6 +54,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	sign_extend
 
+} {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/buffer.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/buffer.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module buffer
+
+Top level modules:
+	buffer
+
 } {} {}} {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/IN_port.v} {1 {vlog -work work -stats=none {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/IN_port.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module IN_Port
