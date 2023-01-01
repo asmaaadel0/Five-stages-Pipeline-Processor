@@ -6,7 +6,7 @@ module alu(
     input [3:0]shamt,
     input [3:0] alu_operation,
     input clk,
-    output reg [2:0] flag=0,
+    output reg [2:0] flag,//=0,
     output reg [15:0] result
     
     );
@@ -105,23 +105,17 @@ flag[2]=op2[(shamt-1)];
  flag[0]=(result==0)? 1:0;
  flag[1]=(result[15]==1)? 1:0;
 end
-// //------------------------------------- IN ---------------------------------------//
-else if(alu_operation==4'b1110)
+// //------------------------------------- IN Or LDD Or STD ---------------------------------------//
+else if(alu_operation==4'b1110) 
 begin
 result = op1 ; //assume op1 has the value of input port
 end
-//------------------------------------- OUT ---------------------------------------//
+//------------------------------------- OUT Or LDM ---------------------------------------//
 else if(alu_operation==4'b1111)
 begin
 result = op2 ; //assume op2 has the value that will be stored in the output port
 end
-// ------------------------------------ NOP and alu_controls = xxxx ---------------------------------------//
-//?;-
-// else 
-// begin
-// //m.s of this:----
- // result =0 ;
-// end
+
 // //------------------------------------- NOP ---------------------------------------//
 // else if(alu_operation==4'b0011)
 // begin

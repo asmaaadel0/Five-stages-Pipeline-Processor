@@ -10,578 +10,578 @@ z2
 cModel Technology
 dC:/intelFPGA/20.1
 valu
-!s110 1672581610
+Z0 !s110 1672591928
 !i10b 1
-!s100 gT3_>4JA:8TUK;e;=DMJz1
-Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I:VGgJIPR9h0iFRUBdc`l?3
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor
-w1672414290
+!s100 I`R]9R]YIX@OebQG6IYn10
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ih1lW_58[2DlVLoh5G?N=h0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor
+Z4 w1672575842
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v
-!i122 419
-L0 3 133
-Z3 OV;L;2020.1;71
+!i122 442
+L0 3 127
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z4 !s108 1672581610.000000
+Z6 !s108 1672591928.000000
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/alu.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z7 o-work work
+Z8 tCvgOpt 0
 vbuffer
-Z7 !s110 1672581613
+Z9 !s110 1672591931
 !i10b 1
-!s100 JKYoUhcJed8DI@IE`Uc6]0
-R0
-I<Cl[n3PVz;AHGA47Q?UWM3
+!s100 oh8infZ;2Z>ZA6YMBzFPc0
 R1
+Iz4][fHS>FXf<k4RRgE^HX2
 R2
-w1670838594
+R3
+w1672559642
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/buffer.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/buffer.v
-!i122 429
-L0 3 24
-R3
+!i122 452
+L0 3 25
+R5
 r1
 !s85 0
 31
-Z8 !s108 1672581612.000000
+Z10 !s108 1672591931.000000
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/buffer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/buffer.v|
 !i113 1
-R5
-R6
+R7
+R8
 vcontrol_unit
-Z9 !s110 1672581611
-!i10b 1
-!s100 o<=ZF0oRA84:Z^iR0]]AL0
 R0
-I7PQbE3e^nIfPg7Hil:LDQ1
+!i10b 1
+!s100 7jT?6>8i?Wbk0o;zz9nml2
 R1
+IB=ajZY8mYZl84nMYA2hCJ2
 R2
-w1672425320
+R3
+R4
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control_unit.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control_unit.v
-!i122 420
-L0 208 413
-R3
+!i122 443
+L0 1 404
+R5
 r1
 !s85 0
 31
-R4
+R6
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control_unit.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/control_unit.v|
 !i113 1
-R5
-R6
-vcount_NOP
 R7
+R8
+vcount_NOP
+Z11 !s110 1672591932
 !i10b 1
-!s100 9H=d=m<dG?:h[E:G6C_<g0
-R0
-Ib=5o8dZ3?llQajZBY;2GY0
+!s100 0A6Skj`IG=9OIgQg?D?Fh1
 R1
+IhhU>l_JTWDCXUVcFg:8CE0
 R2
-w1672066852
+R3
+Z12 w1672528612
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/count_NOP.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/count_NOP.v
-!i122 430
-L0 1 36
-R3
+!i122 453
+L0 1 31
+R5
 r1
 !s85 0
 31
-Z10 !s108 1672581613.000000
+R10
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/count_NOP.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/count_NOP.v|
 !i113 1
-R5
-R6
+R7
+R8
 ncount_@n@o@p
 vdata_stack_memory
-R9
+Z13 !s110 1672591929
 !i10b 1
-!s100 G6KgGjIUB5[8>96eFE4[N1
-R0
-IC^3oD;f;XLSgJmH:l7KeC2
+!s100 Vf0DnXL622llDoj]leQh@1
 R1
+IUPGl>alC<Ji4m8:;Hj4N^0
 R2
-w1672070068
+R3
+R12
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/data_stack_memory.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/data_stack_memory.v
-!i122 423
-L0 1 39
-R3
+!i122 446
+L0 1 32
+R5
 r1
 !s85 0
 31
-Z11 !s108 1672581611.000000
+Z14 !s108 1672591929.000000
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/data_stack_memory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/data_stack_memory.v|
 !i113 1
-R5
-R6
+R7
+R8
 vdecode_ciruit
-Z12 !s110 1672581612
+Z15 !s110 1672591930
 !i10b 1
-!s100 @Q<5:^lL<WBfm4fOdGC8[2
-R0
-IheZUFKlbe^`2^Q>[^[NUP0
+!s100 08ED@J44FoE?_SJWgMdK]2
 R1
+IAU3[NPJ[kkUzB;K7]@TFe2
 R2
-w1670850250
+R3
+w1672559668
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/decode_ciruit.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/decode_ciruit.v
-!i122 425
-L0 2 38
-R3
+!i122 448
+Z16 L0 2 37
+R5
 r1
 !s85 0
 31
-R8
+Z17 !s108 1672591930.000000
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/decode_ciruit.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/decode_ciruit.v|
 !i113 1
-R5
-R6
-vfetch_buffer
 R7
+R8
+vfetch_buffer
+R11
 !i10b 1
-!s100 N<Zl^B64_J@jG8fzAeA5[2
-R0
-I9BOY6z3G8bOe3?jWkQSB`1
+!s100 V75>U3o<><:<l0kY8K[b;1
 R1
+IjXZ=d5cEjnoo40PbC::DX1
 R2
-w1672426832
+R3
+w1672559888
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/fetch_buffer.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/fetch_buffer.v
-!i122 431
-L0 4 105
-R3
+!i122 454
+L0 4 59
+R5
 r1
 !s85 0
 31
-R10
+Z18 !s108 1672591932.000000
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/fetch_buffer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/fetch_buffer.v|
 !i113 1
-R5
-R6
+R7
+R8
 vflag_reg
-Z13 !s110 1672581614
+R11
 !i10b 1
-!s100 V4?QoR:IQlRWS<al]3:0@1
-R0
-IF4hZVEcfnA:_d9?hEd>TQ1
+!s100 `Za;VMCk?Z`ciY<Gj0?kJ0
 R1
+IX3Ab<SNISVZ1:BCJj3NNE3
 R2
-w1672414104
+R3
+w1672560042
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/flag_reg.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/flag_reg.v
-!i122 432
-L0 4 35
+!i122 455
+L0 4 24
+R5
+r1
+!s85 0
+31
+R18
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/flag_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/flag_reg.v|
+!i113 1
+R7
+R8
+vforwarding_unit
+R11
+!i10b 1
+!s100 ;b[XXEoGi?ai1P9hREBFo2
+R1
+IYj^[FRA=bX@B5H;eKzPaW1
+R2
 R3
+R12
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/forwarding_unit.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/forwarding_unit.v
+!i122 456
+L0 1 50
+R5
+r1
+!s85 0
+31
+R18
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/forwarding_unit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/forwarding_unit.v|
+!i113 1
+R7
+R8
+vIN_Port
+Z19 !s110 1672591933
+!i10b 1
+!s100 HooYXIf1_U9o:EY:f@;eJ0
+R1
+IiV?<onf5oK3bAW:hXZVWF1
+R2
+R3
+R4
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/IN_port.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/IN_port.v
+!i122 457
+L0 4 20
+R5
+r1
+!s85 0
+31
+R18
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/IN_port.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/IN_port.v|
+!i113 1
+R7
+R8
+n@i@n_@port
+vinstruction_memory
+R13
+!i10b 1
+!s100 _PmMaTAH6nPb<HLl]Gf6?0
+R1
+IoHC39m=87ooGO1a:DWI@A3
+R2
+R3
+w1672566294
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v
+!i122 444
+L0 3 46
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v|
+!i113 1
+R7
+R8
+vintegration
+R15
+!i10b 1
+!s100 7P72PAmNa@nQIj6>=oQlf3
+R1
+IiaXhB`?INin@R12PJe8P00
+R2
+R3
+w1668624755
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_file.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_file.v
+!i122 447
+L0 1 69
+R5
+r1
+!s85 0
+31
+R17
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_file.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_file.v|
+!i113 1
+R7
+R8
+vintegration_1
+R9
+!i10b 1
+!s100 hLoMRmIL2en]oHO3`Adog2
+R1
+IiNa]UaWWR91_i?zOHIj6S1
+R2
+R3
+w1672441402
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v
+!i122 451
+L0 1 183
+R5
 r1
 !s85 0
 31
 R10
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/flag_reg.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/flag_reg.v|
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v|
 !i113 1
-R5
-R6
-vforwarding_unit
-R13
+R7
+R8
+vintegration_3
+R19
 !i10b 1
-!s100 =X_GC<10MZPPG3[>nW6hl0
-R0
-IbcIUAfX7cmK_N5ef^Dk`B0
+!s100 oLTFV5Ao:o55Okb=jP61D3
 R1
+IiNSdXTgmjWDW8I<3GSG<A0
 R2
-w1672260124
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/forwarding_unit.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/forwarding_unit.v
-!i122 433
-L0 49 49
 R3
+Z20 w1672561712
+Z21 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v
+Z22 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v
+!i122 458
+L0 65 322
+R5
 r1
 !s85 0
 31
-Z14 !s108 1672581614.000000
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/forwarding_unit.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/forwarding_unit.v|
+Z23 !s108 1672591933.000000
+Z24 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v|
+Z25 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v|
 !i113 1
+R7
+R8
+vLast_instr
+R19
+!i10b 1
+!s100 z0aJ[<L?fHC?ACLl;YVLH2
+R1
+Imo2dPhO;2N<Pc>FoB8Q=c0
+R2
+R3
+w1672560022
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/Last_instr_buffer.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/Last_instr_buffer.v
+!i122 459
+L0 4 26
 R5
-R6
-vIN_Port
+r1
+!s85 0
+31
+R23
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/Last_instr_buffer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/Last_instr_buffer.v|
+!i113 1
+R7
+R8
+n@last_instr
+vload_use_detection
+R19
+!i10b 1
+!s100 E5e10N6Pb3z0cU6CDAz]k0
+R1
+IkMPX9<n@PK`h6DY<KCH`;0
+R2
+R3
+R12
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/load_use.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/load_use.v
+!i122 460
+R16
+R5
+r1
+!s85 0
+31
+R23
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/load_use.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/load_use.v|
+!i113 1
+R7
+R8
+vmux_generic
+R15
+!i10b 1
+!s100 dmF5MS7;ai^G34YdbUOUL0
+R1
+Ibz_ZULjbA_U^QFnGLAZdZ2
+R2
+R3
+Z26 w1671045000
+Z27 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v
+Z28 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v
+!i122 449
+L0 3 10
+R5
+r1
+!s85 0
+31
+R17
+Z29 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v|
+Z30 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v|
+!i113 1
+R7
+R8
+vmux_generic_2bit_selector
+R15
+!i10b 1
+!s100 hY?BK17173>K^N7oDfHHc0
+R1
+IHhdOmUHB`:hCkmS@@L;:A0
+R2
+R3
+R26
+R27
+R28
+!i122 449
+L0 15 10
+R5
+r1
+!s85 0
+31
+R17
+R29
+R30
+!i113 1
+R7
+R8
+vOUT_Port
+Z31 !s110 1672591934
+!i10b 1
+!s100 czdHaQI1iG:ZhaA`n=FEG1
+R1
+IfnbB2J1`TLc^J6:kk9^Kg3
+R2
+R3
+w1672561740
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/OUT_port.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/OUT_port.v
+!i122 461
+L0 4 21
+R5
+r1
+!s85 0
+31
+R23
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/OUT_port.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/OUT_port.v|
+!i113 1
+R7
+R8
+n@o@u@t_@port
+vPC
+R31
+!i10b 1
+!s100 jRE0W5dFfLg>?`niGXV722
+R1
+IjXljDoD<QfKekUc5FVnT`3
+R2
+R3
+w1672559686
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/PC_buffer.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/PC_buffer.v
+!i122 462
+Z32 L0 2 24
+R5
+r1
+!s85 0
+31
+Z33 !s108 1672591934.000000
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/PC_buffer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/PC_buffer.v|
+!i113 1
+R7
+R8
+n@p@c
+vPOPed_PC
+R19
+!i10b 1
+!s100 D[EP^K?V`<4UYFlW2Bo>o3
+R1
+II>KNE<AGm=DH9^UkV0zaf3
+R2
+R3
+R20
+R21
+R22
+!i122 458
+L0 21 23
+R5
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R7
+R8
+n@p@o@ped_@p@c
+vprevious_cs_rti
+R31
+!i10b 1
+!s100 R?J3QNid:AV7lAkWCZM6L0
+R1
+IM3RcIg`90NA[_0QY4afnj2
+R2
+R3
+w1672561744
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/previous_cs_rti.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/previous_cs_rti.v
+!i122 463
+L0 4 22
+R5
+r1
+!s85 0
+31
+R33
+!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/previous_cs_rti.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/previous_cs_rti.v|
+!i113 1
+R7
+R8
+vPrevious_SP_change_reg
+R19
+!i10b 1
+!s100 mgmUPfK4@4GgTX^Ff^lAz3
+R1
+I37Ch^kYUU864n7f:l7Ljz2
+R2
+R3
+R20
+R21
+R22
+!i122 458
+L0 47 13
+R5
+r1
+!s85 0
+31
+R23
+R24
+R25
+!i113 1
+R7
+R8
+n@previous_@s@p_change_reg
+vread_file
 R13
 !i10b 1
-!s100 M`nl^ZfGnM:T>d9^K`0P43
-R0
-INYfST5k7mFK6IFXhfR<kn2
+!s100 6UNOFT5U?HLZ@c0`Tm:XW2
 R1
+I1`[7F2iFOZMMiYNXE4o2o2
 R2
-w1672318216
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/IN_port.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/IN_port.v
-!i122 434
-L0 4 31
 R3
+R12
+Z34 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v
+Z35 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v
+!i122 445
+L0 1 23
+R5
 r1
 !s85 0
 31
 R14
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/IN_port.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/IN_port.v|
+Z36 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v|
+Z37 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v|
 !i113 1
-R5
-R6
-n@i@n_@port
-vinstruction_memory
-R9
-!i10b 1
-!s100 bZKc9P=cc1NblbSfJ8hTJ1
-R0
-IAj:2f2FU=29?^7K<lhUPQ3
-R1
-R2
-w1672477714
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v
-!i122 421
-L0 36 86
-R3
-r1
-!s85 0
-31
-R11
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/instruction_memory.v|
-!i113 1
-R5
-R6
-vintegration
-R9
-!i10b 1
-!s100 7P72PAmNa@nQIj6>=oQlf3
-R0
-IiaXhB`?INin@R12PJe8P00
-R1
-R2
-w1668624755
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_file.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_file.v
-!i122 424
-L0 1 69
-R3
-r1
-!s85 0
-31
-R11
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_file.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_file.v|
-!i113 1
-R5
-R6
-vintegration_1
-R12
-!i10b 1
-!s100 hLoMRmIL2en]oHO3`Adog2
-R0
-IiNa]UaWWR91_i?zOHIj6S1
-R1
-R2
-w1672441402
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v
-!i122 428
-L0 1 183
-R3
-r1
-!s85 0
-31
+R7
 R8
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase_1.v|
-!i113 1
-R5
-R6
-vintegration_3
-Z15 !s110 1672581615
-!i10b 1
-!s100 OCf:`U0V3LU]@IU@hF5We1
-R0
-IF0;f8c9=l@UBFYcRZz_Rd2
-R1
-R2
-Z16 w1672436202
-Z17 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v
-Z18 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v
-!i122 435
-L0 81 406
-R3
-r1
-!s85 0
-31
-Z19 !s108 1672581615.000000
-Z20 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v|
-Z21 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/integration_phase3.v|
-!i113 1
-R5
-R6
-vLast_instr
-R15
-!i10b 1
-!s100 zNhXo9iK;LYKNBUb20<Q=3
-R0
-ImACfQg079eifD5V>DI4mf0
-R1
-R2
-w1670954280
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/Last_instr_buffer.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/Last_instr_buffer.v
-!i122 436
-Z22 L0 4 28
-R3
-r1
-!s85 0
-31
-R19
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/Last_instr_buffer.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/Last_instr_buffer.v|
-!i113 1
-R5
-R6
-n@last_instr
-vload_use_detection
-R15
-!i10b 1
-!s100 NJRNCbHM9JZ6O9FPW0zW32
-R0
-IA^Cf5`jF5L>1N6eCY:3LX3
-R1
-R2
-w1672428532
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/load_use.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/load_use.v
-!i122 437
-L0 2 35
-R3
-r1
-!s85 0
-31
-R19
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/load_use.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/load_use.v|
-!i113 1
-R5
-R6
-vmux_generic
-R12
-!i10b 1
-!s100 dmF5MS7;ai^G34YdbUOUL0
-R0
-Ibz_ZULjbA_U^QFnGLAZdZ2
-R1
-R2
-Z23 w1671045000
-Z24 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v
-Z25 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v
-!i122 426
-L0 3 10
-R3
-r1
-!s85 0
-31
-R8
-Z26 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v|
-Z27 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/mux_generic.v|
-!i113 1
-R5
-R6
-vmux_generic_2bit_selector
-R12
-!i10b 1
-!s100 hY?BK17173>K^N7oDfHHc0
-R0
-IHhdOmUHB`:hCkmS@@L;:A0
-R1
-R2
-R23
-R24
-R25
-!i122 426
-L0 15 10
-R3
-r1
-!s85 0
-31
-R8
-R26
-R27
-!i113 1
-R5
-R6
-vOUT_Port
-R15
-!i10b 1
-!s100 3J3J5oi]7`]gfO;z[1zWC1
-R0
-I?lP0;kkZ2fV=mVjhe?Uzo3
-R1
-R2
-w1672318206
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/OUT_port.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/OUT_port.v
-!i122 438
-R22
-R3
-r1
-!s85 0
-31
-R19
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/OUT_port.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/OUT_port.v|
-!i113 1
-R5
-R6
-n@o@u@t_@port
-vPC
-Z28 !s110 1672581616
-!i10b 1
-!s100 F_FKZzlkIOS9cFzOVXl9I0
-R0
-IW1aS3=70o=2Q4DI=WVmz53
-R1
-R2
-w1672315220
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/PC_buffer.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/PC_buffer.v
-!i122 439
-L0 2 49
-R3
-r1
-!s85 0
-31
-R19
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/PC_buffer.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/PC_buffer.v|
-!i113 1
-R5
-R6
-n@p@c
-vPOPed_PC
-R15
-!i10b 1
-!s100 dle]33U_cN_`VJ=@Cbl@I3
-R0
-I0?25LCPVIII:[5M7<nE1o2
-R1
-R2
-R16
-R17
-R18
-!i122 435
-L0 21 26
-R3
-r1
-!s85 0
-31
-R19
-R20
-R21
-!i113 1
-R5
-R6
-n@p@o@ped_@p@c
-vprevious_cs_rti
-R28
-!i10b 1
-!s100 @1RGL[A:DKK_Bnc^`]07G0
-R0
-I>ONH953joh;@KF]BAO]=93
-R1
-R2
-w1672075238
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/previous_cs_rti.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/previous_cs_rti.v
-!i122 440
-L0 4 34
-R3
-r1
-!s85 0
-31
-Z29 !s108 1672581616.000000
-!s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/previous_cs_rti.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/previous_cs_rti.v|
-!i113 1
-R5
-R6
-vPrevious_SP_change_reg
-R15
-!i10b 1
-!s100 mEja2@Z9T9MNA<28>iTWN0
-R0
-IF[N9PIU<3flF>27n7W@`f0
-R1
-R2
-R16
-R17
-R18
-!i122 435
-L0 50 26
-R3
-r1
-!s85 0
-31
-R19
-R20
-R21
-!i113 1
-R5
-R6
-n@previous_@s@p_change_reg
-vread_file
-R9
-!i10b 1
-!s100 ZE5Pm]EGkm6lZR1HnbR@@2
-R0
-ImQmmX[ZSofiR>8J_SD>6X3
-R1
-R2
-w1672477755
-Z30 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v
-Z31 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v
-!i122 422
-L0 1 25
-R3
-r1
-!s85 0
-31
-R11
-Z32 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v|
-Z33 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/read_file.v|
-!i113 1
-R5
-R6
 vreg_array
 !s110 1668610856
 !i10b 1
 !s100 XFkC_19hC1;a:bVDR@iQF3
-R0
-IOjDnTNz3@hYez;=6X2gNT0
 R1
+IOjDnTNz3@hYez;=6X2gNT0
 R2
+R3
 w1668609348
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/reg_file.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/reg_file.v
 !i122 50
-L0 2 24
-R3
+R32
+R5
 r1
 !s85 0
 31
@@ -589,115 +589,115 @@ r1
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/reg_file.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/reg_file.v|
 !i113 1
-R5
-R6
+R7
+R8
 vsign_extend
-R15
+R19
 !i10b 1
 !s100 9MKWS80mLSD;GMeNfnjX00
-R0
-IGB4RJS_^cOB:1oMH?a8L=0
 R1
+IGB4RJS_^cOB:1oMH?a8L=0
 R2
-R16
-R17
-R18
-!i122 435
-L0 2 8
 R3
+R20
+R21
+R22
+!i122 458
+L0 2 8
+R5
 r1
 !s85 0
 31
-R19
-R20
-R21
+R23
+R24
+R25
 !i113 1
-R5
-R6
+R7
+R8
 vsign_extend_16
-R15
+R19
 !i10b 1
 !s100 =>YbO4SnSngBRR8AgN;dS3
-R0
-I5?dnYe:[PX@6WGW1<k]`42
 R1
+I5?dnYe:[PX@6WGW1<k]`42
 R2
-R16
-R17
-R18
-!i122 435
-L0 12 8
 R3
-r1
-!s85 0
-31
-R19
 R20
 R21
-!i113 1
+R22
+!i122 458
+L0 12 8
 R5
-R6
-vSP
-R28
-!i10b 1
-!s100 zhXgeJIoZ=TE_S<FSKAKJ1
-R0
-IbPAkK9_Ka0dz4=I3ehYi83
-R1
-R2
-w1672060332
-8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/SP_buffer.v
-FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/SP_buffer.v
-!i122 441
-L0 3 56
-R3
 r1
 !s85 0
 31
-R29
+R23
+R24
+R25
+!i113 1
+R7
+R8
+vSP
+!s110 1672591935
+!i10b 1
+!s100 gPCbUN3z9dU=ja^WIeb3b3
+R1
+IB=2=^7:7YFaTZZ6eS3@771
+R2
+R3
+w1672561752
+8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/SP_buffer.v
+FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/SP_buffer.v
+!i122 464
+L0 3 28
+R5
+r1
+!s85 0
+31
+R33
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/SP_buffer.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/SP_buffer.v|
 !i113 1
-R5
-R6
+R7
+R8
 n@s@p
 vtb
 !s110 1668589757
 !i10b 1
 !s100 ;B`MlJF:Yem0<g>84Mg293
-R0
-I@_@K>SOn;G?89zSS7o=EY2
 R1
+I@_@K>SOn;G?89zSS7o=EY2
 R2
+R3
 w1668589752
-R30
-R31
+R34
+R35
 !i122 23
 L0 13 27
-R3
+R5
 r1
 !s85 0
 31
 !s108 1668589757.000000
-R32
-R33
+R36
+R37
 !i113 1
-R5
-R6
+R7
+R8
 vtest
 !s110 1672475769
 !i10b 1
 !s100 QhT^`00z0gJhOzR5><;a?2
-R0
-IAf8Oi_7KZcSkBPf<nR?Ge1
 R1
+IAf8Oi_7KZcSkBPf<nR?Ge1
 R2
+R3
 w1670091623
 8D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/test.v
 FD:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/test.v
 !i122 360
 L0 1 17
-R3
+R5
 r1
 !s85 0
 31
@@ -705,5 +705,5 @@ r1
 !s107 D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/test.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/test.v|
 !i113 1
-R5
-R6
+R7
+R8

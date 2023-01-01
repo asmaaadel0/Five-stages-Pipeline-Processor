@@ -16,7 +16,6 @@ integer i;
 always @(posedge clk )
 // always @(*)
  begin
-
 	if(reset)
 	begin
 		for(i=0; i<2**address_width; i=i+1) array_reg[i] = 0;

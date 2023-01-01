@@ -1,5 +1,3 @@
-#project compileall
-
 vsim -gui work.integration_3
 
 add wave -position insertpoint  \
@@ -210,6 +208,7 @@ sim:/integration_3/d_cs_jmp \
 sim:/integration_3/e_cs_jmp \
 sim:/integration_3/m_cs_jmp
 
+
 force -freeze sim:/integration_3/clk 1 0, 0 {50 ps} -r 100
 #force -freeze sim:/integration_3/reset_pc 1 0 -cancel 200 
 #force -deposit sim:/integration_3/d_reset_pc 1 0 -cancel 200 
@@ -238,10 +237,11 @@ force -deposit sim:/integration_3/no_change 00 0 -cancel 300
 force -deposit sim:/integration_3/PC_select 00 0
 force -deposit sim:/integration_3/sel_1_LD_case 0 0
 ###############    forcing input port values      ###############
-#force -freeze sim:/integration_3/in_port_value 1111111111000 2400 -cancel 2500
-#force -freeze sim:/integration_3/in_port_value 1111111111000 2300 -cancel 2400
-#force -freeze sim:/integration_3/in_port_value 1111111111000 2250 -cancel 2350
-force -freeze sim:/integration_3/in_port_value 1111111111000 2350 -cancel 2450
+force -drive sim:/integration_3/in_port_value 0101 350 -cancel 450
+force -drive sim:/integration_3/in_port_value 00011001 450 -cancel 550
+force -drive sim:/integration_3/in_port_value 1111111111111111 550 -cancel 650
+force -drive sim:/integration_3/in_port_value 1111001100100000 650 -cancel 750
 
-mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
+mem load -i {C:/Users/samaa/Desktop/CMP_third_year/arch/project/claen_project/assembler/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
+
 run

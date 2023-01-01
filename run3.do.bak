@@ -9,7 +9,6 @@ sim:/integration_3/pc_width \
 sim:/integration_3/sp_width \
 sim:/integration_3/op_code_width \
 sim:/integration_3/Num_alu \
-sim:/integration_3/CS_NUM \
 sim:/integration_3/pop_width \
 sim:/integration_3/selector_2 \
 sim:/integration_3/selector_3 \
@@ -28,6 +27,9 @@ sim:/integration_3/reset_flag \
 sim:/integration_3/reset_data_stack \
 sim:/integration_3/reset_decode_regs \
 sim:/integration_3/Reset_2Power5 \
+sim:/integration_3/stage_buffer_reset \
+sim:/integration_3/fetch_buffer_reset \
+sim:/integration_3/reset_Last_instr_buffer \
 sim:/integration_3/pc_add1 \
 sim:/integration_3/pc_selected \
 sim:/integration_3/pc_high \
@@ -79,8 +81,6 @@ sim:/integration_3/push_flags \
 sim:/integration_3/Pc_high_pop \
 sim:/integration_3/cs_ret \
 sim:/integration_3/fetch_NOP \
-sim:/integration_3/decode_reset \
-sim:/integration_3/execute_reset \
 sim:/integration_3/decode_NOP \
 sim:/integration_3/cs_rti \
 sim:/integration_3/write_cs_rti \
@@ -158,6 +158,7 @@ sim:/integration_3/e_PC_select \
 sim:/integration_3/e_start_count_nop \
 sim:/integration_3/e_write_cs_rti \
 sim:/integration_3/e_cs_out \
+sim:/integration_3/e_cs_ldd \
 sim:/integration_3/m_data \
 sim:/integration_3/m_result \
 sim:/integration_3/m_in_port_value \
@@ -180,7 +181,7 @@ sim:/integration_3/start_count_nop \
 sim:/integration_3/fetch_nop_counter \
 sim:/integration_3/INT_signal \
 sim:/integration_3/int_pc_handle \
-sim:/integration_3/read_data2_32 \
+sim:/integration_3/chosen_Rdst_32 \
 sim:/integration_3/d_puch_pc_h_int \
 sim:/integration_3/e_puch_pc_h_int \
 sim:/integration_3/Previous_Rdst \
@@ -194,15 +195,32 @@ sim:/integration_3/d_cs_call \
 sim:/integration_3/e_cs_call \
 sim:/integration_3/m_cs_call \
 sim:/integration_3/INT_counter \
+sim:/integration_3/will_jump \
 sim:/integration_3/op1 \
 sim:/integration_3/op2 \
 sim:/integration_3/sel_1 \
 sim:/integration_3/sel_2 \
 sim:/integration_3/sel_1_final \
+sim:/integration_3/sel_2_final \
+sim:/integration_3/modified_d_read_data2 \
+sim:/integration_3/chosen_Rdst_1 \
+sim:/integration_3/decode_read_data_1 \
+sim:/integration_3/decode_read_data_2 \
+sim:/integration_3/read_data1_final \
+sim:/integration_3/read_data2_final \
 sim:/integration_3/fetch_nop_LD \
 sim:/integration_3/cs_ldd \
+sim:/integration_3/d_cs_ldd \
+sim:/integration_3/chosen_Rdst \
+sim:/integration_3/not_this_Rdst \
+sim:/integration_3/d_fetch_nop_LD \
+sim:/integration_3/sel_1_LD_case \
+sim:/integration_3/sel_2_LD_case \
+sim:/integration_3/d_sel_1_LD_case \
 sim:/integration_3/out_port_value \
 sim:/integration_3/in_port_readed_data \
+sim:/integration_3/decode_reset \
+sim:/integration_3/execute_reset \
 sim:/integration_3/d_cs_jmp \
 sim:/integration_3/e_cs_jmp \
 sim:/integration_3/m_cs_jmp
@@ -214,6 +232,12 @@ force -freeze sim:/integration_3/clk 1 0, 0 {50 ps} -r 100
 #NOTE: cancel Reset_2Power5 after 400 as the instuction at 32-1 is ready just before 400
 force -freeze sim:/integration_3/Reset_2Power5 1 0 -cancel 400
 force -freeze sim:/integration_3/reset_data_stack 1 0 -cancel 200
+
+force -freeze sim:/integration_3/stage_buffer_reset 1 0 -cancel 200
+force -freeze sim:/integration_3/fetch_buffer_reset 1 0 -cancel 200
+force -freeze sim:/integration_3/reset_Last_instr_buffer 1 0 -cancel 200
+force -freeze sim:/integration_3/reset_pc_poped 1 0 -cancel 200
+
 force -freeze sim:/integration_3/reset_decode_regs 1 0 -cancel 200
 force -freeze sim:/integration_3/reset_sp 1 0 -cancel 400
 force -freeze sim:/integration_3/reset_count_nop 1 200 -cancel 300
@@ -223,12 +247,14 @@ force -deposit sim:/integration_3/m_start_count_nop 0 0
 force -freeze sim:/integration_3/reset_flag 1 0 -cancel 200
 force -deposit sim:/integration_3/jump_result 0 0
 #force -freeze sim:/integration_3/INT_signal 1 1600 -cancel 1700
-force -freeze sim:/integration_3/INT_signal 1 1660 -cancel 1700
+#force -freeze sim:/integration_3/INT_signal 1 1660 -cancel 1700
+#final:force -freeze sim:/integration_3/INT_signal 1 1660 -cancel 1690
 force -deposit sim:/integration_3/no_change 00 0 -cancel 300 
 force -deposit sim:/integration_3/PC_select 00 0
-
+force -deposit sim:/integration_3/sel_1_LD_case 0 0
 ###############    forcing input port values      ###############
 #force -freeze sim:/integration_3/in_port_value 1111111111000 2400 -cancel 2500
 #force -freeze sim:/integration_3/in_port_value 1111111111000 2300 -cancel 2400
 #force -freeze sim:/integration_3/in_port_value 1111111111000 2250 -cancel 2350
 force -freeze sim:/integration_3/in_port_value 1111111111000 2350 -cancel 2450
+
