@@ -7,15 +7,34 @@ ADD R1,R4
 OUT R4
 RTI
 .ORG 20 #this is the instructions code
-IN R1                   #add 00000005 in R1
-IN R2                   #add 00000019 in R2
-IN R3                   #FFFFFFFF
-IN R4                   #FFFFF320
-MOV R3,R5               #R5= FFFFFFFF , flags no change
-ADD R1,R4               #R4= FFFFF325 , C-->0, N-->1, Z-->0
-SUB R5,R4               #R4= 00000CDA , C-->0, N-->0,Z-->0 
-AND R7,R4               #R4= 00000000 , C-->no change, N-->0, Z-->1
-OR R2, R1               #R1= 0000001D , C-->0, N-->0,Z-->0
-; SHL R1,4                #R1= 000001D0 , C-->0, N-->0,Z-->0
-; SHR R1,2                #R1= 0000001D , C-->0, N-->0,Z-->0
-; JC R1
+LDM R5,3
+LDM R6,4
+LDM R1,1
+STD R1,R5       ;store value of r1 in address of r5
+STD R1,R6       ;store value of r1 in address of r6
+LDD R5,R1       ;R1=1     load address of r5 put it in r1
+LDD R6,R2       ;R2=1     load address of r6 put it in r2
+ADD R2,R1       ;R1=2
+STD R1,R4       ;M[4]=50
+Push R2         ;M[1023]=30 Sp=1022 assume von Neumann arch
+Push R1         ;M[1022]=50 Sp=1021
+LDD R1,R4       ;R1=60
+LDD R2,R4       ;R2=70
+ADD R2,R1       ;R1=130
+Pop R1          ;R1=50
+pop R2          ;R2=30
+
+SETC            ;C=1
+
+NOT R1          ;R1=-5=1111111111111011b   N=1 Z=0
+CLRC    
+INC R0          ;R0=17
+DEC R1          ;R1=-6 N=1 Z=0
+
+.ORG 100
+SETC
+LDM R1,5
+LDM R3,5
+NOP
+NOP
+Sub R3,R1       ;R1=0 Z=1
