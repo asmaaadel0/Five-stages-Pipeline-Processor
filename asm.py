@@ -136,7 +136,6 @@ class Assembler(object):
 
                 elif words[0] == "shl" or words[0] == 'shr':
                     size = 1
-                    ir += '000'
                     source, immediate_value  = words[1].split(",")
                     immediate_value = self.hexToBinaryShift(immediate_value)
                     # Ignore instructions if the immediate shift value is zero
@@ -145,7 +144,7 @@ class Assembler(object):
                     
                     # Limit immediate value to max 16
                     # immediate_value = min(1110, immediate_value)
-                    ir += self.registers[source] + immediate_value + '0'  
+                    ir += self.registers[source] + immediate_value + '0000'  
                     print (words, "SHL SHR THREE OPERAND", size, ir)
                     
 
