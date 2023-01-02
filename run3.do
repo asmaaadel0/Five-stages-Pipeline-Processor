@@ -5,8 +5,11 @@ vsim -gui work.integration_3
 #test
 
 add wave -position 0  sim:/integration_3/decode_stage/array_reg
-
 add wave -position insertpoint  \
+sim:/integration_3/pc \
+sim:/integration_3/out_port_value \
+sim:/integration_3/flag \
+sim:/integration_3/alu_flag \
 sim:/integration_3/decode_stage/data_width \
 sim:/integration_3/decode_stage/address_width \
 sim:/integration_3/decode_stage/clk \
@@ -66,12 +69,9 @@ sim:/integration_3/final_sp \
 sim:/integration_3/sp \
 sim:/integration_3/sp_add1 \
 sim:/integration_3/sp_sub1 \
-sim:/integration_3/pc \
 sim:/integration_3/instruction \
 sim:/integration_3/read_data1 \
 sim:/integration_3/read_data2 \
-sim:/integration_3/flag \
-sim:/integration_3/alu_flag \
 sim:/integration_3/final_flag \
 sim:/integration_3/result \
 sim:/integration_3/read_data1_result \
@@ -236,17 +236,16 @@ sim:/integration_3/d_fetch_nop_LD \
 sim:/integration_3/sel_1_LD_case \
 sim:/integration_3/sel_2_LD_case \
 sim:/integration_3/d_sel_1_LD_case \
-sim:/integration_3/out_port_value \
 sim:/integration_3/in_port_readed_data \
 sim:/integration_3/decode_reset \
 sim:/integration_3/execute_reset \
 sim:/integration_3/d_cs_jmp \
 sim:/integration_3/e_cs_jmp \
 sim:/integration_3/m_cs_jmp
-
+force -deposit sim:/integration_3/alu_flag 0 0
 force -freeze sim:/integration_3/clk 1 0, 0 {50 ps} -r 100
 mem load -i {D:/CUFE24/3rd year/first term/Computer Architecture/Five-stages-Pipeline-Processor/CODE_RAM.mem} /integration_3/inst_mem_stage/mem
-
+force -freeze sim:/integration_3/INT_signal 1 1560 -cancel 1590
 #------------  resets  ---------------#
 #NOTE: cancel Reset_2Power5 after 400 as the instuction at 32-1 is ready just before 400
 force -freeze sim:/integration_3/Reset_2Power5 1 0 -cancel 100
@@ -275,22 +274,36 @@ run
 
 #---------------------  forcing input port values  --------------------#
 #50
-force -freeze sim:/integration_3/in_port_value 0101 0
+force -freeze sim:/integration_3/in_port_value 4'h300 0
 run
 run
 
-#150
-force -freeze sim:/integration_3/in_port_value 00011001 0
+
 run
 run
 
 #250
-force -freeze sim:/integration_3/in_port_value 1111111111111111 0
+force -freeze sim:/integration_3/in_port_value 4'h40 0
 run
 run
 
 #350
-force -freeze sim:/integration_3/in_port_value 1111001100100000 0 
+force -freeze sim:/integration_3/in_port_value 4'h400 0
+run
+run
+
+#450
+force -freeze sim:/integration_3/in_port_value 4'h100 0 
+run
+run
+
+#550
+force -freeze sim:/integration_3/in_port_value 4'h7ff 0 
+run
+run
+
+#650
+force -freeze sim:/integration_3/in_port_value 4'h700 0 
 run
 run
 
