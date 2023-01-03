@@ -18,8 +18,6 @@ starts with the interrupts area (the very first address space from [0 down to 2^
 
 
 ## Implemented Instructions <a name = "implemented-instructions"></a>
-
-## Implemented Instructions
 ### ☝️ One Operand
 ```
 NOP
