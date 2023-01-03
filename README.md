@@ -61,7 +61,7 @@ CALL Rdst
 RET
 RTI
 ```
-### 💾 Input Signals
+### <img src="input-image.jpg" width="50" height="50"> Input Signals
 ```
 Reset
 Interrupt
