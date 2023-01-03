@@ -3,7 +3,7 @@
 ## 📝 Table of Contents
 
 - [About <a name = "about"></a>](#about-)
-- [About <a name = "project-design"></a>](#project-design-)
+- [Project Design <a name = "project-design"></a>](#project-design-)
 - [Implemented Instructions <a name = "screen-video"></a>](#implemented-instructions-)
 - [Contributors <a name = "Contributors"></a>](#contributors-)
 
@@ -18,6 +18,8 @@ Megabytes. Each memory address has a 16-bit width (i.e., is word addressable). T
 starts with the interrupts area (the very first address space from [0 down to 2^5-1]), followed by the instructions area (starting from [2^5 and down to 2^20]) as shown in Figure.1. By default, the PC is initialized with a value of (2^5) where the program code starts.
 
 ## Project Design <a name = "project-design"></a>
+
+![design](https://user-images.githubusercontent.com/88618793/210393039-d1954467-01ed-4c12-820a-4c233f9a57c1.PNG)
 
 [Design.pdf](https://github.com/asmaaadel0/Five-stages-Pipeline-Processor/files/10337938/Design.pdf)
 
