@@ -3,6 +3,7 @@
 ## 📝 Table of Contents
 
 - [About <a name = "about"></a>](#about-)
+- [Project Design <a name = "project-design"></a>](#project-design-)
 - [Implemented Instructions <a name = "screen-video"></a>](#implemented-instructions-)
 - [Contributors <a name = "Contributors"></a>](#contributors-)
 
@@ -16,10 +17,14 @@ The program counter (PC) spans the instructions memory address space that has a 
 Megabytes. Each memory address has a 16-bit width (i.e., is word addressable). The instructions memory
 starts with the interrupts area (the very first address space from [0 down to 2^5-1]), followed by the instructions area (starting from [2^5 and down to 2^20]) as shown in Figure.1. By default, the PC is initialized with a value of (2^5) where the program code starts.
 
+## Project Design <a name = "project-design"></a>
+
+![design](https://user-images.githubusercontent.com/88618793/210393039-d1954467-01ed-4c12-820a-4c233f9a57c1.PNG)
+
+[Design.pdf](https://github.com/asmaaadel0/Five-stages-Pipeline-Processor/files/10337938/Design.pdf)
+
 
 ## Implemented Instructions <a name = "implemented-instructions"></a>
-
-## Implemented Instructions
 ### ☝️ One Operand
 ```
 NOP
@@ -61,7 +66,7 @@ CALL Rdst
 RET
 RTI
 ```
-### <img src="input-image.jpg" width="50" height="50"> Input Signals
+### <img src="input.jpg" width="20" height="20"> Input Signals
 ```
 Reset
 Interrupt
